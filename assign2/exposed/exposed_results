@@ -1,0 +1,13 @@
+Performance Analysis of All Protocols
+Simulation result of Exposed Node Problem
+
+ Throughput 	: 797.015  bps 
+ Interarrival Time	: 0.00999058  sec
+
+
+Simulation result of Exposed Node Problem Removed 
+
+ Throughput 	: 814.826  bps 
+ Interarrival Time	: 0.00658206  sec
+
+

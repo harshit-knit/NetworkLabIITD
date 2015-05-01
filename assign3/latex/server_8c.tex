@@ -1,0 +1,133 @@
+\hypertarget{server_8c}{
+\section{code/server.c File Reference}
+\label{server_8c}\index{code/server.c@{code/server.c}}
+}
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include $<$errno.h$>$}\par
+{\ttfamily \#include $<$signal.h$>$}\par
+{\ttfamily \#include \char`\"{}service.h\char`\"{}}\par
+{\ttfamily \#include $<$sys/socket.h$>$}\par
+{\ttfamily \#include $<$arpa/inet.h$>$}\par
+{\ttfamily \#include $<$semaphore.h$>$}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{server_8c_a614217d263be1fb1a5f76e2ff7be19a2}{PORT}~30000
+\item 
+\#define \hyperlink{server_8c_aafc57d44738df70f43ac87ed969eed47}{QUEUE}~1000
+\item 
+\#define \hyperlink{server_8c_a6821bafc3c88dfb2e433a095df9940c6}{BUF\_\-SIZE}~255
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{server_8c_a12c628df882778d41562209b915848d7}{catch\_\-signal} (int sig, void($\ast$handler)(int))
+\item 
+void \hyperlink{server_8c_aa6b803b42151f1730ed6347ffe741dfb}{handle\_\-shutdown} (int sig)
+\item 
+int \hyperlink{server_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+sem\_\-t \hyperlink{server_8c_a57e5f989454185402d689672f370a749}{sem}
+\item 
+int \hyperlink{server_8c_a7856c32d0079472ae4a362668d8e65c4}{listener\_\-id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{server_8c_a6821bafc3c88dfb2e433a095df9940c6}{
+\index{server.c@{server.c}!BUF\_\-SIZE@{BUF\_\-SIZE}}
+\index{BUF\_\-SIZE@{BUF\_\-SIZE}!server.c@{server.c}}
+\subsubsection[{BUF\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define BUF\_\-SIZE~255}}
+\label{server_8c_a6821bafc3c88dfb2e433a095df9940c6}
+
+
+Definition at line 13 of file server.c.
+
+\hypertarget{server_8c_a614217d263be1fb1a5f76e2ff7be19a2}{
+\index{server.c@{server.c}!PORT@{PORT}}
+\index{PORT@{PORT}!server.c@{server.c}}
+\subsubsection[{PORT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PORT~30000}}
+\label{server_8c_a614217d263be1fb1a5f76e2ff7be19a2}
+
+
+Definition at line 11 of file server.c.
+
+\hypertarget{server_8c_aafc57d44738df70f43ac87ed969eed47}{
+\index{server.c@{server.c}!QUEUE@{QUEUE}}
+\index{QUEUE@{QUEUE}!server.c@{server.c}}
+\subsubsection[{QUEUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define QUEUE~1000}}
+\label{server_8c_aafc57d44738df70f43ac87ed969eed47}
+
+
+Definition at line 12 of file server.c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{server_8c_a12c628df882778d41562209b915848d7}{
+\index{server.c@{server.c}!catch\_\-signal@{catch\_\-signal}}
+\index{catch\_\-signal@{catch\_\-signal}!server.c@{server.c}}
+\subsubsection[{catch\_\-signal}]{\setlength{\rightskip}{0pt plus 5cm}int catch\_\-signal (
+\begin{DoxyParamCaption}
+\item[{int}]{ sig, }
+\item[{void($\ast$)(int)}]{ handler}
+\end{DoxyParamCaption}
+)}}
+\label{server_8c_a12c628df882778d41562209b915848d7}
+Signal Handler for QueryServer 
+
+Definition at line 25 of file server.c.
+
+\hypertarget{server_8c_aa6b803b42151f1730ed6347ffe741dfb}{
+\index{server.c@{server.c}!handle\_\-shutdown@{handle\_\-shutdown}}
+\index{handle\_\-shutdown@{handle\_\-shutdown}!server.c@{server.c}}
+\subsubsection[{handle\_\-shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void handle\_\-shutdown (
+\begin{DoxyParamCaption}
+\item[{int}]{ sig}
+\end{DoxyParamCaption}
+)}}
+\label{server_8c_aa6b803b42151f1730ed6347ffe741dfb}
+this function is used for shuting down the Query Server 
+
+Definition at line 36 of file server.c.
+
+\hypertarget{server_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{
+\index{server.c@{server.c}!main@{main}}
+\index{main@{main}!server.c@{server.c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{server_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+This is main function in this query server is implemented 
+
+Definition at line 47 of file server.c.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{server_8c_a7856c32d0079472ae4a362668d8e65c4}{
+\index{server.c@{server.c}!listener\_\-id@{listener\_\-id}}
+\index{listener\_\-id@{listener\_\-id}!server.c@{server.c}}
+\subsubsection[{listener\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf listener\_\-id}}}
+\label{server_8c_a7856c32d0079472ae4a362668d8e65c4}
+Socket Descriptor Identifier 
+
+Definition at line 21 of file server.c.
+
+\hypertarget{server_8c_a57e5f989454185402d689672f370a749}{
+\index{server.c@{server.c}!sem@{sem}}
+\index{sem@{sem}!server.c@{server.c}}
+\subsubsection[{sem}]{\setlength{\rightskip}{0pt plus 5cm}sem\_\-t {\bf sem}}}
+\label{server_8c_a57e5f989454185402d689672f370a749}
+semaphore used for mutual exclusive excess to file 
+
+Definition at line 17 of file server.c.
+

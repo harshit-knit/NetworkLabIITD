@@ -1,0 +1,79 @@
+\indexentry{code/server.c@{code/server.c}|hyperpage}{5}
+\indexentry{server.c@{server.c}!BUF\_\discretionary {-}{}{}SIZE@{BUF\_\discretionary {-}{}{}SIZE}|hyperpage}{6}
+\indexentry{BUF\_\discretionary {-}{}{}SIZE@{BUF\_\discretionary {-}{}{}SIZE}!server.c@{server.c}|hyperpage}{6}
+\indexentry{server.c@{server.c}!PORT@{PORT}|hyperpage}{6}
+\indexentry{PORT@{PORT}!server.c@{server.c}|hyperpage}{6}
+\indexentry{server.c@{server.c}!QUEUE@{QUEUE}|hyperpage}{6}
+\indexentry{QUEUE@{QUEUE}!server.c@{server.c}|hyperpage}{6}
+\indexentry{server.c@{server.c}!catch\_\discretionary {-}{}{}signal@{catch\_\discretionary {-}{}{}signal}|hyperpage}{6}
+\indexentry{catch\_\discretionary {-}{}{}signal@{catch\_\discretionary {-}{}{}signal}!server.c@{server.c}|hyperpage}{6}
+\indexentry{server.c@{server.c}!handle\_\discretionary {-}{}{}shutdown@{handle\_\discretionary {-}{}{}shutdown}|hyperpage}{6}
+\indexentry{handle\_\discretionary {-}{}{}shutdown@{handle\_\discretionary {-}{}{}shutdown}!server.c@{server.c}|hyperpage}{6}
+\indexentry{server.c@{server.c}!main@{main}|hyperpage}{6}
+\indexentry{main@{main}!server.c@{server.c}|hyperpage}{6}
+\indexentry{server.c@{server.c}!listener\_\discretionary {-}{}{}id@{listener\_\discretionary {-}{}{}id}|hyperpage}{6}
+\indexentry{listener\_\discretionary {-}{}{}id@{listener\_\discretionary {-}{}{}id}!server.c@{server.c}|hyperpage}{6}
+\indexentry{server.c@{server.c}!sem@{sem}|hyperpage}{6}
+\indexentry{sem@{sem}!server.c@{server.c}|hyperpage}{6}
+\indexentry{code/service.c@{code/service.c}|hyperpage}{7}
+\indexentry{service.c@{service.c}!BUF\_\discretionary {-}{}{}SIZE@{BUF\_\discretionary {-}{}{}SIZE}|hyperpage}{7}
+\indexentry{BUF\_\discretionary {-}{}{}SIZE@{BUF\_\discretionary {-}{}{}SIZE}!service.c@{service.c}|hyperpage}{7}
+\indexentry{service.c@{service.c}!addRecord@{addRecord}|hyperpage}{8}
+\indexentry{addRecord@{addRecord}!service.c@{service.c}|hyperpage}{8}
+\indexentry{service.c@{service.c}!bind\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port@{bind\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port}|hyperpage}{8}
+\indexentry{bind\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port@{bind\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port}!service.c@{service.c}|hyperpage}{8}
+\indexentry{service.c@{service.c}!connect\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port@{connect\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port}|hyperpage}{8}
+\indexentry{connect\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port@{connect\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port}!service.c@{service.c}|hyperpage}{8}
+\indexentry{service.c@{service.c}!error@{error}|hyperpage}{8}
+\indexentry{error@{error}!service.c@{service.c}|hyperpage}{8}
+\indexentry{service.c@{service.c}!find\_\discretionary {-}{}{}command@{find\_\discretionary {-}{}{}command}|hyperpage}{8}
+\indexentry{find\_\discretionary {-}{}{}command@{find\_\discretionary {-}{}{}command}!service.c@{service.c}|hyperpage}{8}
+\indexentry{service.c@{service.c}!hear@{hear}|hyperpage}{9}
+\indexentry{hear@{hear}!service.c@{service.c}|hyperpage}{9}
+\indexentry{service.c@{service.c}!open\_\discretionary {-}{}{}listener\_\discretionary {-}{}{}socket@{open\_\discretionary {-}{}{}listener\_\discretionary {-}{}{}socket}|hyperpage}{9}
+\indexentry{open\_\discretionary {-}{}{}listener\_\discretionary {-}{}{}socket@{open\_\discretionary {-}{}{}listener\_\discretionary {-}{}{}socket}!service.c@{service.c}|hyperpage}{9}
+\indexentry{service.c@{service.c}!print\_\discretionary {-}{}{}record@{print\_\discretionary {-}{}{}record}|hyperpage}{9}
+\indexentry{print\_\discretionary {-}{}{}record@{print\_\discretionary {-}{}{}record}!service.c@{service.c}|hyperpage}{9}
+\indexentry{service.c@{service.c}!remove\_\discretionary {-}{}{}spaces@{remove\_\discretionary {-}{}{}spaces}|hyperpage}{9}
+\indexentry{remove\_\discretionary {-}{}{}spaces@{remove\_\discretionary {-}{}{}spaces}!service.c@{service.c}|hyperpage}{9}
+\indexentry{service.c@{service.c}!say@{say}|hyperpage}{9}
+\indexentry{say@{say}!service.c@{service.c}|hyperpage}{9}
+\indexentry{service.c@{service.c}!searchByEntry@{searchByEntry}|hyperpage}{10}
+\indexentry{searchByEntry@{searchByEntry}!service.c@{service.c}|hyperpage}{10}
+\indexentry{service.c@{service.c}!searchByName@{searchByName}|hyperpage}{10}
+\indexentry{searchByName@{searchByName}!service.c@{service.c}|hyperpage}{10}
+\indexentry{service.c@{service.c}!searchByYear@{searchByYear}|hyperpage}{10}
+\indexentry{searchByYear@{searchByYear}!service.c@{service.c}|hyperpage}{10}
+\indexentry{service.c@{service.c}!strnicmp@{strnicmp}|hyperpage}{10}
+\indexentry{strnicmp@{strnicmp}!service.c@{service.c}|hyperpage}{10}
+\indexentry{code/service.h@{code/service.h}|hyperpage}{11}
+\indexentry{service.h@{service.h}!addRecord@{addRecord}|hyperpage}{11}
+\indexentry{addRecord@{addRecord}!service.h@{service.h}|hyperpage}{11}
+\indexentry{service.h@{service.h}!bind\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port@{bind\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port}|hyperpage}{11}
+\indexentry{bind\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port@{bind\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port}!service.h@{service.h}|hyperpage}{11}
+\indexentry{service.h@{service.h}!catch\_\discretionary {-}{}{}signal@{catch\_\discretionary {-}{}{}signal}|hyperpage}{12}
+\indexentry{catch\_\discretionary {-}{}{}signal@{catch\_\discretionary {-}{}{}signal}!service.h@{service.h}|hyperpage}{12}
+\indexentry{service.h@{service.h}!connect\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port@{connect\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port}|hyperpage}{12}
+\indexentry{connect\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port@{connect\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port}!service.h@{service.h}|hyperpage}{12}
+\indexentry{service.h@{service.h}!error@{error}|hyperpage}{12}
+\indexentry{error@{error}!service.h@{service.h}|hyperpage}{12}
+\indexentry{service.h@{service.h}!find\_\discretionary {-}{}{}command@{find\_\discretionary {-}{}{}command}|hyperpage}{12}
+\indexentry{find\_\discretionary {-}{}{}command@{find\_\discretionary {-}{}{}command}!service.h@{service.h}|hyperpage}{12}
+\indexentry{service.h@{service.h}!handle\_\discretionary {-}{}{}shutdown@{handle\_\discretionary {-}{}{}shutdown}|hyperpage}{12}
+\indexentry{handle\_\discretionary {-}{}{}shutdown@{handle\_\discretionary {-}{}{}shutdown}!service.h@{service.h}|hyperpage}{12}
+\indexentry{service.h@{service.h}!hear@{hear}|hyperpage}{12}
+\indexentry{hear@{hear}!service.h@{service.h}|hyperpage}{12}
+\indexentry{service.h@{service.h}!open\_\discretionary {-}{}{}listener\_\discretionary {-}{}{}socket@{open\_\discretionary {-}{}{}listener\_\discretionary {-}{}{}socket}|hyperpage}{13}
+\indexentry{open\_\discretionary {-}{}{}listener\_\discretionary {-}{}{}socket@{open\_\discretionary {-}{}{}listener\_\discretionary {-}{}{}socket}!service.h@{service.h}|hyperpage}{13}
+\indexentry{service.h@{service.h}!print\_\discretionary {-}{}{}record@{print\_\discretionary {-}{}{}record}|hyperpage}{13}
+\indexentry{print\_\discretionary {-}{}{}record@{print\_\discretionary {-}{}{}record}!service.h@{service.h}|hyperpage}{13}
+\indexentry{service.h@{service.h}!remove\_\discretionary {-}{}{}spaces@{remove\_\discretionary {-}{}{}spaces}|hyperpage}{13}
+\indexentry{remove\_\discretionary {-}{}{}spaces@{remove\_\discretionary {-}{}{}spaces}!service.h@{service.h}|hyperpage}{13}
+\indexentry{service.h@{service.h}!say@{say}|hyperpage}{13}
+\indexentry{say@{say}!service.h@{service.h}|hyperpage}{13}
+\indexentry{service.h@{service.h}!searchByEntry@{searchByEntry}|hyperpage}{13}
+\indexentry{searchByEntry@{searchByEntry}!service.h@{service.h}|hyperpage}{13}
+\indexentry{service.h@{service.h}!searchByName@{searchByName}|hyperpage}{14}
+\indexentry{searchByName@{searchByName}!service.h@{service.h}|hyperpage}{14}
+\indexentry{service.h@{service.h}!searchByYear@{searchByYear}|hyperpage}{14}
+\indexentry{searchByYear@{searchByYear}!service.h@{service.h}|hyperpage}{14}

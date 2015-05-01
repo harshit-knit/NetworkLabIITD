@@ -1,0 +1,179 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\usetikzlibrary{arrows,automata}
+\definecolor{pythonred}{rgb}{0.6,0,0} % for strings
+\definecolor{pythongreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{pythonpurple}{rgb}{0.5,0,0.35} % keywords
+	\definecolor{pythondocblue}{rgb}{0.25,0.35,0.75} % javadoc
+	 
+	\lstset{language=python,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{pythonpurple}\bfseries,
+	stringstyle=\color{pythonred},
+	commentstyle=\color{pythongreen},
+	morecomment=[s][\color{pythondocblue}]{/**}{*/},
+	numbers=left,
+	numberstyle=\tiny\color{black},
+        stepnumber=2,
+	numbersep=10pt,
+	tabsize=4,
+	showspaces=false,
+	showstringspaces=false}
+
+% Title Page
+
+ \title{\bfseries\huge \textcolor{purple}{\underline {EEP-703 Computer Network Lab}} \\{\textcolor{blue}{Assignment8-Modeling different scheduling algorithms using Petri Nets}}}
+\author{\bfseries\large\textcolor{black}  {Harshit Kumar Gupta}\\ {\textcolor{black} {2013EET2369 }}\\
+\includegraphics[width=3cm,height=3.4cm]{./iit.png}\\\noindent Computer Technology\\
+\noindent Department Of Electrical Engineering\\IIT DELHI}
+% iit.png: 282x282 pixel, 72dpi, 9.95x9.95 cm, bb=0 0 282 282
+\begin{document}
+\maketitle
+\tableofcontents
+
+
+
+\chapter{\textcolor{blue}{\underline {PROBLEM STATEMENT}}}
+\noindent 
+roblem Statement C1 (Compulsory; Difficulty level *; 100 points)
+Simulate the given two scenarios in sharpe­gui, also analyse and compare the performances:
+\begin{enumerate}
+ \item *Scenario 1: Waiter takes order from customer 1; serves customer 1; takes order from 
+customer 2; serves customer 2.
+\item * Scenario 2: Waiter takes order from customer 1; takes order from customer 2; serves 
+customer 2; serves customer 1.
+Assume traffic mean arrival rate and mean service rate accordingly.
+\item Scenario 3: customers are served on priority basis. Customer 1 type traffic given higher priority 
+to customer 2 type (ex: voice given priority to data).
+\item Scenario 4: Introduce one more type of customer, say type 3 customer and serve them as
+* Priority scheduling (signaling traffic (type 3) preferred over voice (type 2) which is 
+preferred over data (type 1) )
+* Round Robin scheduling  
+\end{enumerate}
+
+
+
+
+
+
+\begin{center}
+\chapter{\textcolor{blue}{\underline {ABSTRACT}}}
+\end{center}
+\begin{enumerate}
+ 
+
+
+\item 
+This work contains an introduction to petrinet model with a customer service
+scenario in a restaurent is implemented. 
+\item This focus on the use or stochastic
+reward petrinet which can include guard function and priority for the timed
+transaction. 
+\item Thus different process can be enabled as per requirement.
+
+\item then plot the graph and compare its characteristic.
+
+\end{enumerate}
+\begin{center}
+\chapter{\textcolor{blue}{\underline {INTRODUCTION}}}
+\end{center}
+\noindent \textbf A Petri net (also known as a place/transition net or P/T net) is one of several mathematical 
+modeling languages for the description of distributed systems. A Petri net is a directed bipartite graph, 
+in which the nodes represent transitions (i.e. events that may occur, signified by bars) and places 
+(i.e. conditions, signified by circles). The directed arcs describe which places are pre- and/or postconditions 
+for which transitions (signified by arrows). 
+
+Like industry standards such as UML activity diagrams, BPMN and EPCs, Petri nets offer a graphical notation for 
+stepwise processes that include choice, iteration, and concurrent execution. Unlike these standards, Petri nets 
+have an exact mathematical definition of their execution semantics, with a well-developed mathematical theory for 
+process analysis.
+
+\begin{center}
+\chapter{\textcolor{blue}{\underline {SPECIFICATIONS AND ASSUMPTIONS}}}
+\end{center}
+\section*{Specifications}
+\begin{enumerate}
+ 
+\item This implementation is based on SHARP TOOLS implementation .
+\item The implementation is need good knowledge of petri nets.
+\item Deals with the simulation of IEEE 802.11 mac protocol with RTS/CTS mechanism.
+
+
+\end{enumerate}
+
+\section*{Assumptions}
+\begin{enumerate}
+ \item Arrival rate propotional to tha packet size.
+\item Virtual load will be  propotional to the square of the arrival rate.
+
+\end{enumerate}
+ 
+\begin{center}
+\chapter{\textcolor{blue}{\underline {LOGIC USED/METHODOLOGY}}}
+\end{center}
+The methodology that is used for developing this project work is defined below:
+\begin{enumerate} 
+\item First use sharp-gui tools to crete given model  . 
+\item And the architecture is based on petri nets.
+\item A Petri net (also known as a place/transition net or P/T net) is one of several mathematical modeling languages for the description of distributed systems.
+\item A Petri net is a directed bipartite graph, in which the nodes represent transitions (i.e. events that may occur, signified by bars) and places (i.e. conditions, signified by circles).
+\item The directed arcs describe which places are pre- and/or postconditions for which transitions (signified by arrows) occurs. 
+\item input arcs are directed arcs drawn from places to transitions ,they represent the conditions that need to be satisfied for the event to be activated
+\item Output arcs are directed arcs drawn from transitions to places,they represent the conditions resulting from the occurrence of an event
+\item Input places of a transition are the set of places that are connected to the transition through input arcs.
+\item Output places of a transition are the set of places to which output arcs exist from the transition.
+\item Tokens are dots (or integers) associated with places; A place containing tokens indicates that the corresponding condition is active
+\item Marking of a Petri net is a vector listing the number of tokens in each place of the net.
+\item When input places of a transition has the required number of tokens, the transition is enabled.
+\item An enabled transition may fire (event happens) taking a specified number of tokens from each input place and depositing a specified number of tokens in each of its output places
+\item first calculates the sum throughput corresponding to the arrival rate .
+\item then calculate the sum throughput corresponding to the virtual loads.
+\item And then compare the characterstic of both the graph.
+\end{enumerate}
+\begin{center}
+\chapter{\textcolor{blue}{\underline {EXECUTION DIRECTIVES}}}\end{center}
+\begin{enumerate}
+ \item  Give the project name  and experiment name.
+\item Then save it after run it create .rgl and .gpn file.
+\item it need petri nets architecture to create the model.
+
+\includegraphics[width=11cm,height=11cm]{./screen.png}
+
+\end{enumerate}
+\begin{center}
+\chapter{\textcolor{blue}{\underline {RESULTS AND CONCLUSIONS}}}\end{center}
+\noindent Hence the Simulate of all the given senario in sharp-gui is done and  performance measures is verified.
+ The graph between arrivalrate and throughput ,and virtual load and throughput are close enough.
+
+\includegraphics[width=11cm,height=11cm]{./eating1_eating2.png}
+Scenario 1
+Waiter takes order from customer 1; serves customer 1; takes order from
+customer 2; serves customer 2
+\includegraphics[width=11cm,height=11cm]{./eating2_eating1.png}
+Scenario 2
+Waiter takes order from customer 1; takes order from customer 2; serves
+customer 2; serves customer 1.
+
+\includegraphics[width=11cm,height=11cm]{./priority_c1_c2.png}
+Scenario 3
+Customers are served on priority basis. customer 1 type traffic given higher
+priority to customer 2 type (ex: voice given priority to data)
+
+\includegraphics[width=11cm,height=11cm]{./priority_forth.png}
+Scenario 4
+Introduce one more type of customer, say type 3 customer and serve them
+as (i) priority scheduling
+
+\includegraphics[width=11cm,height=11cm]{./roundrobin.png}
+Scenario 4
+Introduce one more type of customer, say type 3 customer and serve them
+as (ii) round robin scheduling.
+
+
+\end{document}  

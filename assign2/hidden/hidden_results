@@ -1,0 +1,13 @@
+Performance Analysis of All Protocols
+Simulation result of Hidden Node Problem without RTS/CTS
+
+ Throughput 	: 797.007  bps 
+ Interarrival Time	: 0.00999322  sec
+
+
+Simulation result of Hidden Node Prolem with RTS/CTS
+
+ Throughput 	: 814.198  bps 
+ Interarrival Time	: 0.00666221  sec
+
+

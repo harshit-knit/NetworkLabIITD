@@ -1,0 +1,1280 @@
+Type: SRN Model
+
+SubModel:
+Name: assig7a
+Number of places: 0
+Number of immediate trans: 0
+Number of timed trans: 0
+Number of arcs:62
+Token displayed:true
+
+Place:
+Name: Poth_data_trans
+Token: 0
+X, Y: 924,124
+Number of connected objects: 3
+Dest: Toth_CTS
+Arc:arc8
+Dest: Toth_data_ACK
+Arc:arc5
+Dest: Toth_RTS
+Arc:arc9
+vInputArc: [arc4]
+vOutputArc: [arc5, arc8, arc9]
+Place label:
+X, Y: 895,156
+Width, Height: 96,19
+Textwidth: 0
+
+Place:
+Name: Poth_CTS
+Token: 0
+X, Y: 724,124
+Number of connected objects: 2
+Dest: Toth_CTS
+Arc:arc3
+Dest: Toth_RTS
+Arc:arc7
+vInputArc: [arc2]
+vOutputArc: [arc3, arc7]
+Place label:
+X, Y: 711,156
+Width, Height: 64,19
+Textwidth: 0
+
+Place:
+Name: Poth_data
+Token: 0
+X, Y: 484,124
+Number of connected objects: 2
+Dest: Toth_TCP_data
+Arc:arc6
+Dest: Toth_RTS
+Arc:arc1
+vInputArc: [arc0]
+vOutputArc: [arc1, arc6]
+Place label:
+X, Y: 473,156
+Width, Height: 61,19
+Textwidth: 0
+
+Place:
+Name: Pnode_j
+Token: 1
+X, Y: 1044,284
+Number of connected objects: 3
+Dest: Toth_CTS
+Arc:arc15
+Dest: Tcts
+Arc:arc16
+Dest: Tno_CTS
+Arc:arc17
+vInputArc: [arc25, arc39, arc49, arc53]
+vOutputArc: [arc15, arc16, arc17]
+Place label:
+X, Y: 1038,316
+Width, Height: 50,19
+Textwidth: 0
+
+Place:
+Name: Pchan
+Token: 1
+X, Y: 764,284
+Number of connected objects: 3
+Dest: Toth_CTS
+Arc:arc12
+Dest: Tcts
+Arc:arc13
+Dest: Tno_CTS
+Arc:arc14
+vInputArc: [arc50, arc52, arc61]
+vOutputArc: [arc12, arc13, arc14]
+Place label:
+X, Y: 763,316
+Width, Height: 40,19
+Textwidth: 0
+
+Place:
+Name: Pnode_i
+Token: 1
+X, Y: 444,284
+Number of connected objects: 2
+Dest: Trts
+Arc:arc11
+Dest: Toth_CTS
+Arc:arc10
+vInputArc: [arc26, arc38, arc48, arc51]
+vOutputArc: [arc10, arc11]
+Place label:
+X, Y: 438,316
+Width, Height: 50,19
+Textwidth: 0
+
+Place:
+Name: Pcts
+Token: 0
+X, Y: 884,404
+Number of connected objects: 3
+Dest: Trts
+Arc:arc22
+Dest: Tcts
+Arc:arc23
+Dest: Tno_CTS
+Arc:arc24
+vInputArc: [arc21]
+vOutputArc: [arc22, arc23, arc24]
+Place label:
+X, Y: 888,436
+Width, Height: 30,19
+Textwidth: 0
+
+Place:
+Name: Pdata
+Token: 0
+X, Y: 604,404
+Number of connected objects: 2
+Dest: Trts
+Arc:arc20
+Dest: Ttcp_data
+Arc:arc19
+vInputArc: [arc18]
+vOutputArc: [arc19, arc20]
+Place label:
+X, Y: 605,436
+Width, Height: 36,19
+Textwidth: 0
+
+Place:
+Name: Pdata_trans
+Token: 0
+X, Y: 884,604
+Number of connected objects: 2
+Dest: Trts
+Arc:arc28
+Dest: Tdata_trans
+Arc:arc29
+vInputArc: [arc27]
+vOutputArc: [arc28, arc29]
+Place label:
+X, Y: 868,636
+Width, Height: 71,19
+Textwidth: 0
+
+Place:
+Name: Pack
+Token: 0
+X, Y: 884,764
+Number of connected objects: 2
+Dest: t2
+Arc:arc31
+Dest: t1
+Arc:arc32
+vInputArc: [arc30]
+vOutputArc: [arc31, arc32]
+Place label:
+X, Y: 887,796
+Width, Height: 33,19
+Textwidth: 0
+
+Place:
+Name: Pmac_tcp_ack
+Token: 0
+X, Y: 644,804
+Number of connected objects: 2
+Dest: Trts
+Arc:arc35
+Dest: Trts_cts
+Arc:arc34
+vInputArc: [arc33]
+vOutputArc: [arc34, arc35]
+Place label:
+X, Y: 619,836
+Width, Height: 89,19
+Textwidth: 0
+
+Place:
+Name: Pmac_tcp_data
+Token: 0
+X, Y: 484,804
+Number of connected objects: 1
+Dest: Tmac_tcp_ack
+Arc:arc37
+vInputArc: [arc36]
+vOutputArc: [arc37]
+Place label:
+X, Y: 457,836
+Width, Height: 92,19
+Textwidth: 0
+
+Place:
+Name: Pno_prev_tcp_ack
+Token: 0
+X, Y: 644,924
+Number of connected objects: 1
+Dest: t1
+Arc:arc41
+vInputArc: [arc40]
+vOutputArc: [arc41]
+Place label:
+X, Y: 608,956
+Width, Height: 111,19
+Textwidth: 0
+
+Place:
+Name: Pprev_tcp_ack
+Token: 1
+X, Y: 844,924
+Number of connected objects: 2
+Dest: t3
+Arc:arc43
+Dest: t2
+Arc:arc44
+vInputArc: [arc42, arc45]
+vOutputArc: [arc43, arc44]
+Place label:
+X, Y: 818,956
+Width, Height: 90,19
+Textwidth: 0
+
+Place:
+Name: Pcreate_tcp_ack
+Token: 0
+X, Y: 1124,924
+Number of connected objects: 1
+Dest: Tcreate_tcp_ack
+Arc:arc46
+vInputArc: [arc47]
+vOutputArc: [arc46]
+Place label:
+X, Y: 1094,956
+Width, Height: 99,19
+Textwidth: 0
+
+Place:
+Name: Pmac_ack
+Token: 0
+X, Y: 1204,804
+Number of connected objects: 2
+Dest: Trts
+Arc:arc59
+Dest: Tmac_ack
+Arc:arc55
+vInputArc: [arc54]
+vOutputArc: [arc55, arc59]
+Place label:
+X, Y: 1191,836
+Width, Height: 64,19
+Textwidth: 0
+
+Immediate:
+Name: t3
+Width: 5
+Height: 32
+X, Y: 738,924
+Guard: null
+Probability: 0.5
+Choice Input: Constant value
+Number of connected objects: 1
+Dest: Pprev_tcp_ack
+Arc:arc42
+vInputArc: [arc43]
+vOutputArc: [arc42]
+Type Transition: Immediate
+Place Dependent: null
+Value Transition: 10
+Transition label:
+X, Y: 734,956
+Width, Height: 16,19
+Textwidth: 0
+Priority: 10
+
+Immediate:
+Name: t2
+Width: 5
+Height: 32
+X, Y: 738,804
+Guard: null
+Probability: 0.5
+Choice Input: Constant value
+Number of connected objects: 1
+Dest: Pmac_tcp_ack
+Arc:arc33
+vInputArc: [arc31, arc44]
+vOutputArc: [arc33]
+Type Transition: Immediate
+Place Dependent: null
+Value Transition: 10
+Transition label:
+X, Y: 734,836
+Width, Height: 16,19
+Textwidth: 0
+Priority: 10
+
+Immediate:
+Name: t1
+Width: 5
+Height: 32
+X, Y: 1058,804
+Guard: null
+Probability: 0.5
+Choice Input: Constant value
+Number of connected objects: 1
+Dest: Pmac_ack
+Arc:arc54
+vInputArc: [arc32, arc41]
+vOutputArc: [arc54]
+Type Transition: Immediate
+Place Dependent: null
+Value Transition: 10
+Transition label:
+X, Y: 1054,836
+Width, Height: 16,19
+Textwidth: 0
+Priority: 10
+
+Timed:
+Name: Toth_data_ACK
+Width: 14
+Height: 32
+X, Y: 1013,124
+Number of connected objects: 3
+Dest: Pchan
+Arc:arc52
+Dest: Pnode_j
+Arc:arc53
+Dest: Pnode_i
+Arc:arc51
+vInputArc: [arc5]
+vOutputArc: [arc51, arc52, arc53]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: 1/2818
+Transition label:
+X, Y: 1011,156
+Width, Height: 96,19
+Textwidth: 0
+Guard: null
+Priority: 10
+Choice Input: Constant
+
+Timed:
+Name: Toth_CTS
+Width: 14
+Height: 32
+X, Y: 813,124
+Number of connected objects: 1
+Dest: Poth_data_trans
+Arc:arc4
+vInputArc: [arc3, arc8, arc10, arc12, arc15]
+vOutputArc: [arc4]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: 1/314
+Transition label:
+X, Y: 811,156
+Width, Height: 65,19
+Textwidth: 0
+Guard: null
+Priority: 10
+Choice Input: Constant
+
+Timed:
+Name: Toth_RTS
+Width: 14
+Height: 32
+X, Y: 613,124
+Number of connected objects: 1
+Dest: Poth_CTS
+Arc:arc2
+vInputArc: [arc1, arc7, arc9]
+vOutputArc: [arc2]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: funct3
+Transition label:
+X, Y: 611,156
+Width, Height: 65,19
+Textwidth: 0
+Guard: null
+Priority: 10
+Choice Input: Function
+
+Timed:
+Name: Toth_TCP_data
+Width: 14
+Height: 32
+X, Y: 373,124
+Number of connected objects: 1
+Dest: Poth_data
+Arc:arc0
+vInputArc: [arc6]
+vOutputArc: [arc0]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: (N-1)*lam
+Transition label:
+X, Y: 371,156
+Width, Height: 95,19
+Textwidth: 0
+Guard: null
+Priority: 10
+Choice Input: Constant
+
+Timed:
+Name: Ttcp_data
+Width: 14
+Height: 32
+X, Y: 493,404
+Number of connected objects: 1
+Dest: Pdata
+Arc:arc18
+vInputArc: [arc19]
+vOutputArc: [arc18]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: lam
+Transition label:
+X, Y: 491,436
+Width, Height: 62,19
+Textwidth: 0
+Guard: null
+Priority: 10
+Choice Input: Constant
+
+Timed:
+Name: Tno_CTS
+Width: 14
+Height: 32
+X, Y: 1013,404
+Number of connected objects: 2
+Dest: Pnode_j
+Arc:arc25
+Dest: Pnode_i
+Arc:arc26
+vInputArc: [arc14, arc17, arc24]
+vOutputArc: [arc25, arc26]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: 1/50000
+Transition label:
+X, Y: 1011,436
+Width, Height: 61,19
+Textwidth: 0
+Guard: null
+Priority: 10
+Choice Input: Constant
+
+Timed:
+Name: Trts
+Width: 14
+Height: 32
+X, Y: 733,404
+Number of connected objects: 1
+Dest: Pcts
+Arc:arc21
+vInputArc: [arc11, arc20, arc22, arc28, arc35, arc59]
+vOutputArc: [arc21]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: lamr
+Transition label:
+X, Y: 731,436
+Width, Height: 29,19
+Textwidth: 0
+Guard: null
+Priority: 10
+Choice Input: Constant
+
+Timed:
+Name: Tcts
+Width: 32
+Height: 14
+X, Y: 884,533
+Number of connected objects: 1
+Dest: Pdata_trans
+Arc:arc27
+vInputArc: [arc13, arc16, arc23]
+vOutputArc: [arc27]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: 1/314
+Transition label:
+X, Y: 891,556
+Width, Height: 31,19
+Textwidth: 0
+Guard: null
+Priority: 10
+Choice Input: Constant
+
+Timed:
+Name: Tdata_trans
+Width: 32
+Height: 14
+X, Y: 884,693
+Number of connected objects: 1
+Dest: Pack
+Arc:arc30
+vInputArc: [arc29]
+vOutputArc: [arc30]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: 1/1303
+Transition label:
+X, Y: 891,716
+Width, Height: 72,19
+Textwidth: 0
+Guard: null
+Priority: 10
+Choice Input: Constant
+
+Timed:
+Name: Trts_cts
+Width: 14
+Height: 32
+X, Y: 573,804
+Number of connected objects: 1
+Dest: Pmac_tcp_data
+Arc:arc36
+vInputArc: [arc34]
+vOutputArc: [arc36]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: 1/686
+Transition label:
+X, Y: 571,836
+Width, Height: 53,19
+Textwidth: 0
+Guard: null
+Priority: 10
+Choice Input: Constant
+
+Timed:
+Name: Tmac_tcp_ack
+Width: 14
+Height: 32
+X, Y: 493,924
+Number of connected objects: 3
+Dest: Pno_prev_tcp_ack
+Arc:arc40
+Dest: Pchan
+Arc:arc61
+Dest: Pnode_i
+Arc:arc38
+vInputArc: [arc37]
+vOutputArc: [arc38, arc39, arc40, arc61]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: 1/1515
+Transition label:
+X, Y: 491,956
+Width, Height: 90,19
+Textwidth: 0
+Guard: null
+Priority: 10
+Choice Input: Constant
+
+Timed:
+Name: Tcreate_tcp_ack
+Width: 14
+Height: 32
+X, Y: 973,924
+Number of connected objects: 1
+Dest: Pprev_tcp_ack
+Arc:arc45
+vInputArc: [arc46]
+vOutputArc: [arc45]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: 1/0.1
+Transition label:
+X, Y: 971,956
+Width, Height: 100,19
+Textwidth: 0
+Guard: null
+Priority: 10
+Choice Input: Constant
+
+Timed:
+Name: Tmac_ack
+Width: 14
+Height: 32
+X, Y: 1213,924
+Number of connected objects: 4
+Dest: Pchan
+Arc:arc50
+Dest: Pcreate_tcp_ack
+Arc:arc47
+Dest: Pnode_j
+Arc:arc49
+Dest: Pnode_i
+Arc:arc48
+vInputArc: [arc55]
+vOutputArc: [arc47, arc48, arc49, arc50]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: 1/202
+Transition label:
+X, Y: 1211,956
+Width, Height: 65,19
+Textwidth: 0
+Guard: null
+Priority: 10
+Choice Input: Constant
+
+Arc:
+Name: arc0
+X1, Y1, X2, Y2: 387,134,484,136
+Type: Regular
+Multiplicity: p
+Src: Toth_TCP_data
+Dest: Poth_data
+ArcPoints: [java.awt.Point[x=387,y=134], java.awt.Point[x=484,y=136]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc1
+X1, Y1, X2, Y2: 515,136,613,135
+Type: Regular
+Multiplicity: 1
+Src: Poth_data
+Dest: Toth_RTS
+ArcPoints: [java.awt.Point[x=515,y=136], java.awt.Point[x=613,y=135]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc2
+X1, Y1, X2, Y2: 627,134,724,136
+Type: Regular
+Multiplicity: 1
+Src: Toth_RTS
+Dest: Poth_CTS
+ArcPoints: [java.awt.Point[x=627,y=134], java.awt.Point[x=724,y=136]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc3
+X1, Y1, X2, Y2: 755,135,813,135
+Type: Regular
+Multiplicity: 1
+Src: Poth_CTS
+Dest: Toth_CTS
+ArcPoints: [java.awt.Point[x=755,y=135], java.awt.Point[x=813,y=135]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc4
+X1, Y1, X2, Y2: 827,134,924,136
+Type: Regular
+Multiplicity: 1
+Src: Toth_CTS
+Dest: Poth_data_trans
+ArcPoints: [java.awt.Point[x=827,y=134], java.awt.Point[x=924,y=136]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc5
+X1, Y1, X2, Y2: 955,135,1013,135
+Type: Regular
+Multiplicity: 1
+Src: Poth_data_trans
+Dest: Toth_data_ACK
+ArcPoints: [java.awt.Point[x=955,y=135], java.awt.Point[x=1013,y=135]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc6
+X1, Y1, X2, Y2: 484,145,387,141
+Type: Inhibitor
+Multiplicity: (N-1)*p
+Src: Poth_data
+Dest: Toth_TCP_data
+ArcPoints: [java.awt.Point[x=484,y=145], java.awt.Point[x=387,y=141]]
+Choice Input: Constant
+Circle1, Circle2: 390,140
+
+Arc:
+Name: arc7
+X1, Y1, X2, Y2: 724,145,627,141
+Type: Inhibitor
+Multiplicity: 1
+Src: Poth_CTS
+Dest: Toth_RTS
+ArcPoints: [java.awt.Point[x=724,y=145], java.awt.Point[x=627,y=141]]
+Choice Input: Constant
+Circle1, Circle2: 630,140
+
+Arc:
+Name: arc8
+X1, Y1, X2, Y2: 924,145,827,141
+Type: Inhibitor
+Multiplicity: 1
+Src: Poth_data_trans
+Dest: Toth_CTS
+ArcPoints: [java.awt.Point[x=924,y=145], java.awt.Point[x=827,y=141]]
+Choice Input: Constant
+Circle1, Circle2: 830,140
+
+Arc:
+Name: arc9
+X1, Y1, X2, Y2: 928,128,627,133
+Type: Inhibitor
+Multiplicity: 1
+Src: Poth_data_trans
+Dest: Toth_RTS
+ArcPoints: [java.awt.Point[x=928,y=128], java.awt.Point[x=883,y=56], java.awt.Point[x=680,y=56], java.awt.Point[x=627,y=133]]
+Choice Input: Constant
+Circle1, Circle2: 629,130
+
+Arc:
+Name: arc10
+X1, Y1, X2, Y2: 473,290,813,139
+Type: Regular
+Multiplicity: 1
+Src: Pnode_i
+Dest: Toth_CTS
+ArcPoints: [java.awt.Point[x=473,y=290], java.awt.Point[x=813,y=139]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc11
+X1, Y1, X2, Y2: 475,303,733,413
+Type: Regular
+Multiplicity: 1
+Src: Pnode_i
+Dest: Trts
+ArcPoints: [java.awt.Point[x=475,y=303], java.awt.Point[x=733,y=413]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc12
+X1, Y1, X2, Y2: 780,284,813,147
+Type: Regular
+Multiplicity: 1
+Src: Pchan
+Dest: Toth_CTS
+ArcPoints: [java.awt.Point[x=780,y=284], java.awt.Point[x=813,y=147]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc13
+X1, Y1, X2, Y2: 789,312,899,533
+Type: Regular
+Multiplicity: 1
+Src: Pchan
+Dest: Tcts
+ArcPoints: [java.awt.Point[x=789,y=312], java.awt.Point[x=899,y=533]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc14
+X1, Y1, X2, Y2: 795,304,1013,413
+Type: Inhibitor
+Multiplicity: 1
+Src: Pchan
+Dest: Tno_CTS
+ArcPoints: [java.awt.Point[x=795,y=304], java.awt.Point[x=1013,y=413]]
+Choice Input: Constant
+Circle1, Circle2: 1009,411
+
+Arc:
+Name: arc15
+X1, Y1, X2, Y2: 1044,297,813,143
+Type: Regular
+Multiplicity: 1
+Src: Pnode_j
+Dest: Toth_CTS
+ArcPoints: [java.awt.Point[x=1044,y=297], java.awt.Point[x=779,y=197], java.awt.Point[x=813,y=143]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc16
+X1, Y1, X2, Y2: 1049,311,904,533
+Type: Regular
+Multiplicity: 1
+Src: Pnode_j
+Dest: Tcts
+ArcPoints: [java.awt.Point[x=1049,y=311], java.awt.Point[x=935,y=396], java.awt.Point[x=904,y=533]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc17
+X1, Y1, X2, Y2: 1050,313,1013,415
+Type: Regular
+Multiplicity: 1
+Src: Pnode_j
+Dest: Tno_CTS
+ArcPoints: [java.awt.Point[x=1050,y=313], java.awt.Point[x=979,y=380], java.awt.Point[x=979,y=415], java.awt.Point[x=1013,y=415]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc18
+X1, Y1, X2, Y2: 507,414,604,416
+Type: Regular
+Multiplicity: p
+Src: Ttcp_data
+Dest: Pdata
+ArcPoints: [java.awt.Point[x=507,y=414], java.awt.Point[x=604,y=416]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc19
+X1, Y1, X2, Y2: 604,425,507,421
+Type: Inhibitor
+Multiplicity: p
+Src: Pdata
+Dest: Ttcp_data
+ArcPoints: [java.awt.Point[x=604,y=425], java.awt.Point[x=507,y=421]]
+Choice Input: Constant
+Circle1, Circle2: 510,420
+
+Arc:
+Name: arc20
+X1, Y1, X2, Y2: 635,416,733,415
+Type: Regular
+Multiplicity: 1
+Src: Pdata
+Dest: Trts
+ArcPoints: [java.awt.Point[x=635,y=416], java.awt.Point[x=733,y=415]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc21
+X1, Y1, X2, Y2: 747,415,884,416
+Type: Regular
+Multiplicity: 1
+Src: Trts
+Dest: Pcts
+ArcPoints: [java.awt.Point[x=747,y=415], java.awt.Point[x=884,y=416]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc22
+X1, Y1, X2, Y2: 884,424,747,422
+Type: Inhibitor
+Multiplicity: 1
+Src: Pcts
+Dest: Trts
+ArcPoints: [java.awt.Point[x=884,y=424], java.awt.Point[x=747,y=422]]
+Choice Input: Constant
+Circle1, Circle2: 750,421
+
+Arc:
+Name: arc23
+X1, Y1, X2, Y2: 902,435,901,533
+Type: Regular
+Multiplicity: 1
+Src: Pcts
+Dest: Tcts
+ArcPoints: [java.awt.Point[x=902,y=435], java.awt.Point[x=901,y=533]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc24
+X1, Y1, X2, Y2: 915,419,1012,429
+Type: Regular
+Multiplicity: 1
+Src: Pcts
+Dest: Tno_CTS
+ArcPoints: [java.awt.Point[x=915,y=419], java.awt.Point[x=970,y=429], java.awt.Point[x=1012,y=429], java.awt.Point[x=1012,y=429]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc25
+X1, Y1, X2, Y2: 1027,414,1056,315
+Type: Regular
+Multiplicity: 1
+Src: Tno_CTS
+Dest: Pnode_j
+ArcPoints: [java.awt.Point[x=1027,y=414], java.awt.Point[x=1057,y=413], java.awt.Point[x=1056,y=315]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc26
+X1, Y1, X2, Y2: 1027,409,475,304
+Type: Regular
+Multiplicity: 1
+Src: Tno_CTS
+Dest: Pnode_i
+ArcPoints: [java.awt.Point[x=1027,y=409], java.awt.Point[x=1043,y=403], java.awt.Point[x=1043,y=373], java.awt.Point[x=475,y=304]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc27
+X1, Y1, X2, Y2: 900,547,902,604
+Type: Regular
+Multiplicity: 1
+Src: Tcts
+Dest: Pdata_trans
+ArcPoints: [java.awt.Point[x=900,y=547], java.awt.Point[x=902,y=604]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc28
+X1, Y1, X2, Y2: 884,622,737,436
+Type: Inhibitor
+Multiplicity: 1
+Src: Pdata_trans
+Dest: Trts
+ArcPoints: [java.awt.Point[x=884,y=622], java.awt.Point[x=741,y=619], java.awt.Point[x=737,y=436]]
+Choice Input: Constant
+Circle1, Circle2: 737,439
+
+Arc:
+Name: arc29
+X1, Y1, X2, Y2: 902,635,901,693
+Type: Regular
+Multiplicity: 1
+Src: Pdata_trans
+Dest: Tdata_trans
+ArcPoints: [java.awt.Point[x=902,y=635], java.awt.Point[x=901,y=693]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc30
+X1, Y1, X2, Y2: 900,707,902,764
+Type: Regular
+Multiplicity: 1
+Src: Tdata_trans
+Dest: Pack
+ArcPoints: [java.awt.Point[x=900,y=707], java.awt.Point[x=902,y=764]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc31
+X1, Y1, X2, Y2: 885,786,743,820
+Type: Regular
+Multiplicity: 1
+Src: Pack
+Dest: t2
+ArcPoints: [java.awt.Point[x=885,y=786], java.awt.Point[x=743,y=820]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc32
+X1, Y1, X2, Y2: 915,780,1058,815
+Type: Regular
+Multiplicity: 1
+Src: Pack
+Dest: t1
+ArcPoints: [java.awt.Point[x=915,y=780], java.awt.Point[x=1058,y=815]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc33
+X1, Y1, X2, Y2: 738,822,675,822
+Type: Regular
+Multiplicity: 1
+Src: t2
+Dest: Pmac_tcp_ack
+ArcPoints: [java.awt.Point[x=738,y=822], java.awt.Point[x=675,y=822]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc34
+X1, Y1, X2, Y2: 644,822,587,820
+Type: Regular
+Multiplicity: 1
+Src: Pmac_tcp_ack
+Dest: Trts_cts
+ArcPoints: [java.awt.Point[x=644,y=822], java.awt.Point[x=587,y=820]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc35
+X1, Y1, X2, Y2: 657,804,733,419
+Type: Inhibitor
+Multiplicity: 1
+Src: Pmac_tcp_ack
+Dest: Trts
+ArcPoints: [java.awt.Point[x=657,y=804], java.awt.Point[x=661,y=464], java.awt.Point[x=733,y=419]]
+Choice Input: Constant
+Circle1, Circle2: 729,421
+
+Arc:
+Name: arc36
+X1, Y1, X2, Y2: 573,821,515,822
+Type: Regular
+Multiplicity: 1
+Src: Trts_cts
+Dest: Pmac_tcp_data
+ArcPoints: [java.awt.Point[x=573,y=821], java.awt.Point[x=515,y=822]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc37
+X1, Y1, X2, Y2: 502,835,500,924
+Type: Regular
+Multiplicity: 1
+Src: Pmac_tcp_data
+Dest: Tmac_tcp_ack
+ArcPoints: [java.awt.Point[x=502,y=835], java.awt.Point[x=500,y=924]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc38
+X1, Y1, X2, Y2: 493,941,457,315
+Type: Regular
+Multiplicity: 1
+Src: Tmac_tcp_ack
+Dest: Pnode_i
+ArcPoints: [java.awt.Point[x=493,y=941], java.awt.Point[x=473,y=925], java.awt.Point[x=457,y=315]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc39
+X1, Y1, X2, Y2: 493,944,1075,304
+Type: Regular
+Multiplicity: 1
+Src: Tmac_tcp_ack
+Dest: Pnode_j
+ArcPoints: [java.awt.Point[x=493,y=944], java.awt.Point[x=465,y=949], java.awt.Point[x=462,y=1070], java.awt.Point[x=1388,y=1070], java.awt.Point[x=1364,y=341], java.awt.Point[x=1075,y=304]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc40
+X1, Y1, X2, Y2: 507,935,644,936
+Type: Regular
+Multiplicity: 1
+Src: Tmac_tcp_ack
+Dest: Pno_prev_tcp_ack
+ArcPoints: [java.awt.Point[x=507,y=935], java.awt.Point[x=644,y=936]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc41
+X1, Y1, X2, Y2: 666,925,1058,816
+Type: Regular
+Multiplicity: 1
+Src: Pno_prev_tcp_ack
+Dest: t1
+ArcPoints: [java.awt.Point[x=666,y=925], java.awt.Point[x=698,y=884], java.awt.Point[x=957,y=851], java.awt.Point[x=1058,y=816]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc42
+X1, Y1, X2, Y2: 738,943,848,951
+Type: Regular
+Multiplicity: 1
+Src: t3
+Dest: Pprev_tcp_ack
+ArcPoints: [java.awt.Point[x=738,y=943], java.awt.Point[x=700,y=958], java.awt.Point[x=702,y=995], java.awt.Point[x=819,y=996], java.awt.Point[x=848,y=951]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc43
+X1, Y1, X2, Y2: 844,942,743,942
+Type: Regular
+Multiplicity: 2
+Src: Pprev_tcp_ack
+Dest: t3
+ArcPoints: [java.awt.Point[x=844,y=942], java.awt.Point[x=743,y=942]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc44
+X1, Y1, X2, Y2: 856,924,743,823
+Type: Regular
+Multiplicity: 1
+Src: Pprev_tcp_ack
+Dest: t2
+ArcPoints: [java.awt.Point[x=856,y=924], java.awt.Point[x=854,y=842], java.awt.Point[x=743,y=823]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc45
+X1, Y1, X2, Y2: 973,941,875,942
+Type: Regular
+Multiplicity: 1
+Src: Tcreate_tcp_ack
+Dest: Pprev_tcp_ack
+ArcPoints: [java.awt.Point[x=973,y=941], java.awt.Point[x=875,y=942]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc46
+X1, Y1, X2, Y2: 1124,942,987,942
+Type: Regular
+Multiplicity: 1
+Src: Pcreate_tcp_ack
+Dest: Tcreate_tcp_ack
+ArcPoints: [java.awt.Point[x=1124,y=942], java.awt.Point[x=987,y=942]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc47
+X1, Y1, X2, Y2: 1213,941,1155,942
+Type: Regular
+Multiplicity: 1
+Src: Tmac_ack
+Dest: Pcreate_tcp_ack
+ArcPoints: [java.awt.Point[x=1213,y=941], java.awt.Point[x=1155,y=942]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc48
+X1, Y1, X2, Y2: 1221,956,450,312
+Type: Regular
+Multiplicity: 1
+Src: Tmac_ack
+Dest: Pnode_i
+ArcPoints: [java.awt.Point[x=1221,y=956], java.awt.Point[x=1221,y=1044], java.awt.Point[x=428,y=1047], java.awt.Point[x=422,y=376], java.awt.Point[x=450,y=312]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc49
+X1, Y1, X2, Y2: 1227,936,1074,306
+Type: Regular
+Multiplicity: 1
+Src: Tmac_ack
+Dest: Pnode_j
+ArcPoints: [java.awt.Point[x=1227,y=936], java.awt.Point[x=1345,y=941], java.awt.Point[x=1322,y=371], java.awt.Point[x=1074,y=306]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc50
+X1, Y1, X2, Y2: 1227,933,794,305
+Type: Regular
+Multiplicity: 1
+Src: Tmac_ack
+Dest: Pchan
+ArcPoints: [java.awt.Point[x=1227,y=933], java.awt.Point[x=1323,y=899], java.awt.Point[x=1278,y=396], java.awt.Point[x=794,y=305]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc51
+X1, Y1, X2, Y2: 1027,134,446,291
+Type: Regular
+Multiplicity: 1
+Src: Toth_data_ACK
+Dest: Pnode_i
+ArcPoints: [java.awt.Point[x=1027,y=134], java.awt.Point[x=1061,y=133], java.awt.Point[x=1060,y=14], java.awt.Point[x=329,y=17], java.awt.Point[x=332,y=251], java.awt.Point[x=446,y=291]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc52
+X1, Y1, X2, Y2: 1027,136,795,295
+Type: Regular
+Multiplicity: 1
+Src: Toth_data_ACK
+Dest: Pchan
+ArcPoints: [java.awt.Point[x=1027,y=136], java.awt.Point[x=1067,y=148], java.awt.Point[x=795,y=295]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc53
+X1, Y1, X2, Y2: 1027,142,1064,284
+Type: Regular
+Multiplicity: 1
+Src: Toth_data_ACK
+Dest: Pnode_j
+ArcPoints: [java.awt.Point[x=1027,y=142], java.awt.Point[x=1070,y=185], java.awt.Point[x=1064,y=284]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc54
+X1, Y1, X2, Y2: 1063,816,1204,816
+Type: Regular
+Multiplicity: 1
+Src: t1
+Dest: Pmac_ack
+ArcPoints: [java.awt.Point[x=1063,y=816], java.awt.Point[x=1204,y=816]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc55
+X1, Y1, X2, Y2: 1222,835,1220,924
+Type: Regular
+Multiplicity: 1
+Src: Pmac_ack
+Dest: Tmac_ack
+ArcPoints: [java.awt.Point[x=1222,y=835], java.awt.Point[x=1220,y=924]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc59
+X1, Y1, X2, Y2: 1208,808,747,424
+Type: Inhibitor
+Multiplicity: 1
+Src: Pmac_ack
+Dest: Trts
+ArcPoints: [java.awt.Point[x=1208,y=808], java.awt.Point[x=1008,y=508], java.awt.Point[x=747,y=424]]
+Choice Input: Constant
+Circle1, Circle2: 750,425
+
+Arc:
+Name: arc61
+X1, Y1, X2, Y2: 503,924,771,313
+Type: Regular
+Multiplicity: 1
+Src: Tmac_tcp_ack
+Dest: Pchan
+ArcPoints: [java.awt.Point[x=503,y=924], java.awt.Point[x=771,y=313]]
+Choice Input: Constant
+TypeIO: output
+
+
+Output:
+Outputs created: 2
+Output name: Steady-state throughput for a transition
+Time: null
+State: Toth_data_ACK
+Grid values: 4
+Val: 10
+Val: 10/1000000
+Val: 1/362
+Val: 3
+Output name: Steady-state throughput for a transition
+Time: null
+State: Tdata_trans
+Grid values: 4
+Val: 10
+Val: 10/1000000
+Val: 1/362
+Val: 3

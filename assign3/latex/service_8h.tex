@@ -1,0 +1,296 @@
+\hypertarget{service_8h}{
+\section{code/service.h File Reference}
+\label{service_8h}\index{code/service.h@{code/service.h}}
+}
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include $<$errno.h$>$}\par
+{\ttfamily \#include $<$signal.h$>$}\par
+{\ttfamily \#include $<$sys/socket.h$>$}\par
+{\ttfamily \#include $<$arpa/inet.h$>$}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{service_8h_aad9796c174f7ef5d226cd169f2520fd5}{error} (char $\ast$msg)
+\item 
+int \hyperlink{service_8h_a2dfe1cc9bf55284b4c9fd3ce6d2d0c23}{open\_\-listener\_\-socket} ()
+\item 
+int \hyperlink{service_8h_af475fa0e1fbc35853084778d81ae4543}{catch\_\-signal} (int signal, void($\ast$handler)(int))
+\item 
+void \hyperlink{service_8h_a1e3d860f2f8bbbce5b4aa186121fb436}{handle\_\-shutdown} (int signal)
+\item 
+void \hyperlink{service_8h_abf90f4f3c5717b24c10c02d761808a75}{bind\_\-to\_\-port} (int socket, int port)
+\item 
+void \hyperlink{service_8h_a11bd2f26bf20aef6cc230dcaa20946cb}{connect\_\-to\_\-port} (int socket, char $\ast$addres, int port)
+\item 
+int \hyperlink{service_8h_a7ba3fdb2b358afaaa79ec0d4447bfeb0}{say} (int socket, char $\ast$s)
+\item 
+int \hyperlink{service_8h_ab4c6c3069627c12fce0799c4a4c0d56a}{hear} (int socket, char $\ast$buf, int len)
+\item 
+int \hyperlink{service_8h_a23b78fc7bd55af6a02d7a8c5d7cf71df}{find\_\-command} (char $\ast$bigString)
+\item 
+void \hyperlink{service_8h_a131712ff33601785b937827eb3523047}{remove\_\-spaces} (const char $\ast$input, char $\ast$result)
+\item 
+void \hyperlink{service_8h_a17f44589d1c3322034fc06489a357627}{searchByName} (char $\ast$name, int s)
+\item 
+void \hyperlink{service_8h_abac6444b6c3deec7b4239a3b11443bbc}{searchByEntry} (char $\ast$entry, int s)
+\item 
+void \hyperlink{service_8h_a18b9fd8e5be2804502582b3f085978ab}{searchByYear} (char $\ast$year, int s)
+\item 
+void \hyperlink{service_8h_acbc6968d93ec14afa54611c4fff1d556}{print\_\-record} (int s)
+\item 
+void \hyperlink{service_8h_a18a7c4c003e36ed0f4b316f54a8e2360}{addRecord} (char $\ast$a, char $\ast$b, char $\ast$c, int s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{service_8h_a18a7c4c003e36ed0f4b316f54a8e2360}{
+\index{service.h@{service.h}!addRecord@{addRecord}}
+\index{addRecord@{addRecord}!service.h@{service.h}}
+\subsubsection[{addRecord}]{\setlength{\rightskip}{0pt plus 5cm}void addRecord (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ name, }
+\item[{char $\ast$}]{ entry, }
+\item[{char $\ast$}]{ email, }
+\item[{int}]{ s}
+\end{DoxyParamCaption}
+)}}
+\label{service_8h_a18a7c4c003e36ed0f4b316f54a8e2360}
+This function is used for inserting student record in database 
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]name of Student \item[{\em entry}]entry number of Student \item[{\em email}]email of Student \end{DoxyParams}
+
+
+Definition at line 324 of file service.c.
+
+\hypertarget{service_8h_abf90f4f3c5717b24c10c02d761808a75}{
+\index{service.h@{service.h}!bind\_\-to\_\-port@{bind\_\-to\_\-port}}
+\index{bind\_\-to\_\-port@{bind\_\-to\_\-port}!service.h@{service.h}}
+\subsubsection[{bind\_\-to\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}void bind\_\-to\_\-port (
+\begin{DoxyParamCaption}
+\item[{int}]{ socket, }
+\item[{int}]{ port}
+\end{DoxyParamCaption}
+)}}
+\label{service_8h_abf90f4f3c5717b24c10c02d761808a75}
+this function is used for binding socket to port 
+\begin{DoxyParams}{Parameters}
+\item[{\em socket}]socket descriptor \item[{\em port}]port no for binding \end{DoxyParams}
+
+
+Definition at line 81 of file service.c.
+
+\hypertarget{service_8h_af475fa0e1fbc35853084778d81ae4543}{
+\index{service.h@{service.h}!catch\_\-signal@{catch\_\-signal}}
+\index{catch\_\-signal@{catch\_\-signal}!service.h@{service.h}}
+\subsubsection[{catch\_\-signal}]{\setlength{\rightskip}{0pt plus 5cm}int catch\_\-signal (
+\begin{DoxyParamCaption}
+\item[{int}]{ sig, }
+\item[{void($\ast$)(int)}]{ handler}
+\end{DoxyParamCaption}
+)}}
+\label{service_8h_af475fa0e1fbc35853084778d81ae4543}
+Signal Handler for QueryServer 
+
+Definition at line 25 of file server.c.
+
+\hypertarget{service_8h_a11bd2f26bf20aef6cc230dcaa20946cb}{
+\index{service.h@{service.h}!connect\_\-to\_\-port@{connect\_\-to\_\-port}}
+\index{connect\_\-to\_\-port@{connect\_\-to\_\-port}!service.h@{service.h}}
+\subsubsection[{connect\_\-to\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}void connect\_\-to\_\-port (
+\begin{DoxyParamCaption}
+\item[{int}]{ socket, }
+\item[{char $\ast$}]{ address, }
+\item[{int}]{ port}
+\end{DoxyParamCaption}
+)}}
+\label{service_8h_a11bd2f26bf20aef6cc230dcaa20946cb}
+This is used for connecting socket to a port 
+\begin{DoxyParams}{Parameters}
+\item[{\em socket}]socket identifier \item[{\em address}]ip address of system \item[{\em port}]port number \end{DoxyParams}
+
+
+Definition at line 106 of file service.c.
+
+\hypertarget{service_8h_aad9796c174f7ef5d226cd169f2520fd5}{
+\index{service.h@{service.h}!error@{error}}
+\index{error@{error}!service.h@{service.h}}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}void error (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ msg}
+\end{DoxyParamCaption}
+)}}
+\label{service_8h_aad9796c174f7ef5d226cd169f2520fd5}
+This function is used for printing error message to stderr stream 
+\begin{DoxyParams}{Parameters}
+\item[{\em msg}]it is pointer to the error mesaage \end{DoxyParams}
+
+
+Definition at line 20 of file service.c.
+
+\hypertarget{service_8h_a23b78fc7bd55af6a02d7a8c5d7cf71df}{
+\index{service.h@{service.h}!find\_\-command@{find\_\-command}}
+\index{find\_\-command@{find\_\-command}!service.h@{service.h}}
+\subsubsection[{find\_\-command}]{\setlength{\rightskip}{0pt plus 5cm}int find\_\-command (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ bigString}
+\end{DoxyParamCaption}
+)}}
+\label{service_8h_a23b78fc7bd55af6a02d7a8c5d7cf71df}
+This is used for extracting the code corresponding to a command 
+\begin{DoxyParams}{Parameters}
+\item[{\em bigString}]pointer to message containing command \end{DoxyParams}
+
+
+Definition at line 166 of file service.c.
+
+\hypertarget{service_8h_a1e3d860f2f8bbbce5b4aa186121fb436}{
+\index{service.h@{service.h}!handle\_\-shutdown@{handle\_\-shutdown}}
+\index{handle\_\-shutdown@{handle\_\-shutdown}!service.h@{service.h}}
+\subsubsection[{handle\_\-shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void handle\_\-shutdown (
+\begin{DoxyParamCaption}
+\item[{int}]{ sig}
+\end{DoxyParamCaption}
+)}}
+\label{service_8h_a1e3d860f2f8bbbce5b4aa186121fb436}
+this function is used for shuting down the Query Server 
+
+Definition at line 36 of file server.c.
+
+\hypertarget{service_8h_ab4c6c3069627c12fce0799c4a4c0d56a}{
+\index{service.h@{service.h}!hear@{hear}}
+\index{hear@{hear}!service.h@{service.h}}
+\subsubsection[{hear}]{\setlength{\rightskip}{0pt plus 5cm}int hear (
+\begin{DoxyParamCaption}
+\item[{int}]{ socket, }
+\item[{char $\ast$}]{ buf, }
+\item[{int}]{ len}
+\end{DoxyParamCaption}
+)}}
+\label{service_8h_ab4c6c3069627c12fce0799c4a4c0d56a}
+This method is used for reading message form Socket 
+\begin{DoxyParams}{Parameters}
+\item[{\em socket}]socket descriptor \item[{\em buf}]pointer to Message \item[{\em len}]length of message \end{DoxyParams}
+
+
+Definition at line 138 of file service.c.
+
+\hypertarget{service_8h_a2dfe1cc9bf55284b4c9fd3ce6d2d0c23}{
+\index{service.h@{service.h}!open\_\-listener\_\-socket@{open\_\-listener\_\-socket}}
+\index{open\_\-listener\_\-socket@{open\_\-listener\_\-socket}!service.h@{service.h}}
+\subsubsection[{open\_\-listener\_\-socket}]{\setlength{\rightskip}{0pt plus 5cm}int open\_\-listener\_\-socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{service_8h_a2dfe1cc9bf55284b4c9fd3ce6d2d0c23}
+This function is used for creating socket descriptor \begin{DoxyReturn}{Returns}
+handle of socket 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file service.c.
+
+\hypertarget{service_8h_acbc6968d93ec14afa54611c4fff1d556}{
+\index{service.h@{service.h}!print\_\-record@{print\_\-record}}
+\index{print\_\-record@{print\_\-record}!service.h@{service.h}}
+\subsubsection[{print\_\-record}]{\setlength{\rightskip}{0pt plus 5cm}void print\_\-record (
+\begin{DoxyParamCaption}
+\item[{int}]{ s}
+\end{DoxyParamCaption}
+)}}
+\label{service_8h_acbc6968d93ec14afa54611c4fff1d556}
+this method is used for printing all records of database 
+\begin{DoxyParams}{Parameters}
+\item[{\em s}]socket descriptor \end{DoxyParams}
+
+
+Definition at line 208 of file service.c.
+
+\hypertarget{service_8h_a131712ff33601785b937827eb3523047}{
+\index{service.h@{service.h}!remove\_\-spaces@{remove\_\-spaces}}
+\index{remove\_\-spaces@{remove\_\-spaces}!service.h@{service.h}}
+\subsubsection[{remove\_\-spaces}]{\setlength{\rightskip}{0pt plus 5cm}void remove\_\-spaces (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ input, }
+\item[{char $\ast$}]{ result}
+\end{DoxyParamCaption}
+)}}
+\label{service_8h_a131712ff33601785b937827eb3523047}
+this function is used for returning a string from which spaces has been removed 
+\begin{DoxyParams}{Parameters}
+\item[{\em input}]original string \item[{\em result}]final string \end{DoxyParams}
+
+
+Definition at line 66 of file service.c.
+
+\hypertarget{service_8h_a7ba3fdb2b358afaaa79ec0d4447bfeb0}{
+\index{service.h@{service.h}!say@{say}}
+\index{say@{say}!service.h@{service.h}}
+\subsubsection[{say}]{\setlength{\rightskip}{0pt plus 5cm}int say (
+\begin{DoxyParamCaption}
+\item[{int}]{ socket, }
+\item[{char $\ast$}]{ s}
+\end{DoxyParamCaption}
+)}}
+\label{service_8h_a7ba3fdb2b358afaaa79ec0d4447bfeb0}
+This method is used for writing message to the socket 
+\begin{DoxyParams}{Parameters}
+\item[{\em socket}]socket identifier \item[{\em s}]message to send to socket \end{DoxyParams}
+
+
+Definition at line 123 of file service.c.
+
+\hypertarget{service_8h_abac6444b6c3deec7b4239a3b11443bbc}{
+\index{service.h@{service.h}!searchByEntry@{searchByEntry}}
+\index{searchByEntry@{searchByEntry}!service.h@{service.h}}
+\subsubsection[{searchByEntry}]{\setlength{\rightskip}{0pt plus 5cm}void searchByEntry (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ name, }
+\item[{int}]{ s}
+\end{DoxyParamCaption}
+)}}
+\label{service_8h_abac6444b6c3deec7b4239a3b11443bbc}
+this method this used for searching records in database using enrollment Number of student and printing all matched records 
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]enrollment Number of student \end{DoxyParams}
+
+
+Definition at line 260 of file service.c.
+
+\hypertarget{service_8h_a17f44589d1c3322034fc06489a357627}{
+\index{service.h@{service.h}!searchByName@{searchByName}}
+\index{searchByName@{searchByName}!service.h@{service.h}}
+\subsubsection[{searchByName}]{\setlength{\rightskip}{0pt plus 5cm}void searchByName (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ name, }
+\item[{int}]{ s}
+\end{DoxyParamCaption}
+)}}
+\label{service_8h_a17f44589d1c3322034fc06489a357627}
+this method this used for searching records in database using name of student and printing all matched records 
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]name of student \end{DoxyParams}
+
+
+Definition at line 229 of file service.c.
+
+\hypertarget{service_8h_a18b9fd8e5be2804502582b3f085978ab}{
+\index{service.h@{service.h}!searchByYear@{searchByYear}}
+\index{searchByYear@{searchByYear}!service.h@{service.h}}
+\subsubsection[{searchByYear}]{\setlength{\rightskip}{0pt plus 5cm}void searchByYear (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ name, }
+\item[{int}]{ s}
+\end{DoxyParamCaption}
+)}}
+\label{service_8h_a18b9fd8e5be2804502582b3f085978ab}
+this method this used for searching records in database using enrollment Year of student and printing all matched records 
+\begin{DoxyParams}{Parameters}
+\item[{\em name}]enrollment Year of student \end{DoxyParams}
+
+
+Definition at line 289 of file service.c.
+

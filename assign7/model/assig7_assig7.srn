@@ -1,0 +1,13 @@
+Type: SRN Model
+
+SubModel:
+Name: assig7
+Number of places: 0
+Number of immediate trans: 0
+Number of timed trans: 0
+Number of arcs:0
+Token displayed:false
+
+
+Output:
+Outputs created: 0

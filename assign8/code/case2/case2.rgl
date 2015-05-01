@@ -1,0 +1,66 @@
+Model Name : case2
+Owner : SHARPE Project Group
+Date Created : Sun Feb 24 14:25:27 IST 2013
+Comment : 
+
+CommentEnd
+
+SubModel : asg
+Type : SRN Model
+
+
+Function:
+Name:takeorder1
+Number Parameter:0
+Body number of lines:5
+if ( #(c1)>=1 and  #(waiterfree)>=1 )
+1
+else
+0
+end 
+
+
+Function:
+Name:takeorder2
+Number Parameter:0
+Body number of lines:5
+if ( #(c2)>=1 and  #(waiterfree)>=1 and #(wait1)>=1 ) 
+1
+else
+0
+end 
+
+
+Function:
+Name:tellkitchen
+Number Parameter:0
+Body number of lines:5
+if ( #(ordertaken)>=1) 
+1 
+else 
+0
+end 
+
+
+Function:
+Name:servefood1
+Number Parameter:0
+Body number of lines:5
+if ( #(waiterfree)>=1  and  #(wait1)>=1 and #(c2eating)>=1) 
+1 
+else 
+0
+end 
+
+
+Function:
+Name:servefood2
+Number Parameter:0
+Body number of lines:5
+if (  #(waiterfree)>=1  and  #(wait2)>=1) 
+1 
+else 
+0
+end 
+
+

@@ -1,0 +1,251 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\usetikzlibrary{arrows,automata}
+\DeclareUnicodeCharacter{00A0}{~}
+\definecolor{pythonred}{rgb}{0.6,0,0} % for strings
+\definecolor{pythongreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{pythonpurple}{rgb}{0.5,0,0.35} % keywords
+	\definecolor{pythondocblue}{rgb}{0.25,0.35,0.75} % javadoc
+	\renewcommand{\thechapter}{}
+	\renewcommand{\chaptername}{}
+	\lstset{language=python,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{pythonpurple}\bfseries,
+	stringstyle=\color{pythonred},
+	commentstyle=\color{pythongreen},
+	morecomment=[s][\color{pythondocblue}]{/**}{*/},
+	numbers=left,
+	numberstyle=\tiny\color{black},
+        stepnumber=2,
+	numbersep=10pt,
+	tabsize=4,
+	showspaces=false,
+	showstringspaces=false}
+
+% Title Page
+
+ \title{\bfseries\huge \textcolor{red}{\underline {EEP-703 Network Lab}} \\{\textcolor{blue}{Assignment 2-Simulating AODV and DSDV in NS2:}}}
+\author{\bfseries\large\textcolor{black} {Harshit Kumar Gupta}\\ {\textcolor{black}{2013EET2369}}\\
+\includegraphics[width=3cm,height=3.4cm]{./iit.png}\\\noindent Computer Technology\\
+\noindent Department Of Electrical Engineering\\IIT DELHI}
+% iit.png: 282x282 pixel, 72dpi, 9.95x9.95 cm, bb=0 0 282 282
+\begin{document}
+\maketitle
+\tableofcontents
+
+
+\chapter{\textcolor{blue}{\underline {PROBLEM STATEMENT}}}
+\noindent 
+Construct wireless networks and conduct simulations in NS-2 for following:
+\begin{enumerate}
+ \item  Let us consider a 3 node topology (A, B and C), where A is the source and C is the destination. 
+\\The coordinates of A and C are (50, 50) and (400, 50). 
+\\A and C are out of each others range. B is an intermediate node acting as a router. 
+\\Use DSDV and AODV as the underlying protocols. Consider CBR traffic at 200 Kbps. Use the following scenarios in your simulation:
+\end{enumerate}
+
+\begin{enumerate}
+ \item  when B is a static router at (200, 50)
+
+\item when B is a dynamic router moving from (0, 50) to (200, 50) in a straight line at a constant speed
+
+\item Plot throughput at C against time for both scenarios using both AODV and DSDV.
+
+
+\item  Demonstrate hidden node problem and exposed node problem by conducting simulations on suitable topologies. 
+\end{enumerate}
+\begin{center}
+\chapter{\textcolor{blue}{\underline {ABSTRACT}}}
+\end{center}
+\noindent The entire code has been written as to simulate on a Network Simulator which inputs a 'tcl' file and when compiled with a ns2 Simulator generates a 'trace' and 'nam' file as Output.
+	  Furthermore awk tool has been used as to extract the columns of the trace file and to act them as parameters for deciding the effect of bottlenecks in the Network through
+	  realising the Packet Size and the inter delay time between the packets. Finally the value of those parameters is plotted using the 'gnuplot' tool so as to get the  values through a graph.
+
+
+\begin{center}
+\chapter{\textcolor{blue}{\underline {INTRODUCTION}}}
+\end{center}
+\noindent \textbf In 1996-97, ns version 2 (ns-2) was initiated based on a refactoring by Steve McCanne. Use of Tcl was replaced by MIT's Object Tcl (OTcl), an object-oriented dialect of Tcl.
+		  The core of ns-2 is also written in C++, but the C++ simulation objects are linked to shadow objects in OTcl and variables can be linked between both language realms.
+		  Simulation scripts are written in the OTcl language, an extension of the Tcl scripting language.
+                  Presently, ns-2 consists of over 300,000 lines of source code, and there is probably a comparable amount of contributed code that is not integrated directly into the main distribution of ns-2 exist,
+                  both maintained and unmaintained. It runs on GNU/Linux, FreeBSD, Solaris, and Mac OS X.
+		  \\AWK is an interpreted programming language designed for text processing and typically used as a data extraction and reporting tool. 
+		  It is a standard feature of most Unix-like operating systems. AWK was very popular in the late 1970s and 1980s, but from the 1990s has largely been replaced by Perl,
+		  on which AWK had a strong influence.
+		  
+		 While the gnuplot is a command-line program that can generate two- and three-dimensional plots of functions, data, and data fits. 
+		    It is frequently used for publication-quality graphics as well as education.gnuplot can produce output directly on screen, 
+		    or in many formats of graphics files, including Portable Network Graphics (PNG), Encapsulated PostScript (EPS), Scalable Vector Graphics (SVG), JPEG and many others. 
+		    It is also capable of producing LaTeX code that can be included directly in LaTeX documents, making use of LaTeX's fonts and powerful formula notation abilities.
+		    The program can be used both interactively and in batch mode using scripts.
+
+\begin{center}
+\chapter{\textcolor{blue}{\underline {SPECIFICATIONS AND ASSUMPTIONS}}}
+\end{center}
+\section*{Specifications}
+\begin{enumerate}
+ 
+ \item position of A (0,50)
+ \item position of B(200,50) in static topology
+\item from (0,50) to (200,50) in dynamic topology  
+\item  position of C(400,50) 
+ \item CBR traffic =200Kb
+
+\end{enumerate}
+
+\section*{Assumptions}
+\begin{enumerate}
+\item ns2 Simulator will be used for compiling the tcl file.
+\item Inspite of perl ; 'awk' tool will be used to cut the parameters.
+\item 'gnuplot' has been used to plot the values to study bottlenecks.
+\item Other throughput degradation factors have been ignored.
+\end{enumerate}
+ 
+\begin{center}
+\chapter{\textcolor{blue}{\underline {METHODOLOGY}}}
+\end{center}
+The methodology that is used for developing this project work is defined below:
+\begin{enumerate} 
+\item The entire code is written in tcl file format.
+\item First of all all the required 3 nodes are created. Out of which 1 is sender and 1 is receiver node.
+\item 1 nodes act as Router which transmit packet from sender to Receiver.
+\item Links are Wireless and are created as per Specifications above.
+\item A CBR  traffic source is Setup over the TCP agent.
+\item Once the file is compiled it , the Output trace file is generated.
+\item nam file is used for simulation of network in given topology.
+\item trace file is used for analyis of network
+\end{enumerate}
+
+\begin{center}
+\chapter{\textcolor{blue}{\underline {Execution Directive}}}
+\end{center}
+The Directions to how do we execute the program as to accomplish the project.
+\begin{enumerate} 
+\item Reach the Path of the Project Folder using cd assign1
+\item Compile the tcl file by  ns tcl-script.tcl [parameters]  
+\item trace-output.tr and nam-output.nam file is genearted.
+\item Cut the Parameter columns using awk as   awk -f filename.awk filename.tr >parameters.dat 
+\item plot the parameters using the gnuplot as  Write gnuplot on Terminal 
+\item gnuplot throughput.plot ;gnuplot interarrival.plot
+\item This us how we get the graphical analysis of our network.
+
+\end{enumerate}
+
+
+
+\begin{center}
+\chapter{\textcolor{blue}{\underline {Simulation}}}
+
+ 
+
+
+ \includegraphics[width=11 cm,height=11 cm]{./simulation.png}
+
+
+Simulation in NS2
+\end{center}
+
+
+\chapter{\textcolor{blue}{\underline {OUTPUT GRAPH}}}
+
+ 
+\begin{center}
+Throughput Analysis in AODV and DSDV
+ \includegraphics[width=15 cm,height=15 cm]{./throughput.png}
+
+
+\end{center}
+
+\begin{center}
+InterArrival Time Analysis in AODV and DSDV
+ \includegraphics[width=15 cm,height=13 cm]{./interarrival.png}
+
+
+\end{center}
+\begin{center}
+Throughput Analysis in Hidden Node Problem
+ \includegraphics[width=15 cm,height=15 cm]{./hidden_throughput.png}
+
+
+\end{center}
+
+\begin{center}
+InterArrival Time Analysis in Hidden Node Problem
+ \includegraphics[width=15 cm,height=13 cm]{./hidden_interarrival.png}
+
+
+\end{center}
+\begin{center}
+Throughput Analysis in Exposed Node Problem
+ \includegraphics[width=15 cm,height=15 cm]{./exposed_throughput.png}
+
+
+\end{center}
+
+\begin{center}
+InterArrival Time Analysis in Exposed Node Problem
+ \includegraphics[width=15 cm,height=13 cm]{./exposed_interarrival.png}
+
+
+\end{center}
+\begin{center}
+Throughput Analysis in CSMA/CA
+ \includegraphics[width=15 cm,height=15 cm]{./csma_throughput.png}
+
+
+\end{center}
+
+\begin{center}
+InterArrival Time Analysis in CSMA/CA
+ \includegraphics[width=15 cm,height=13 cm]{./csma_interarrival.png}
+
+
+\end{center}
+
+
+
+
+\begin{center}
+\chapter{\textcolor{blue}{\underline {RESULTS AND CONCLUSIONS}}}
+\begin{enumerate}
+\item For CBR traffic analysis over TCP and UDP client .tr(trace) file is used.
+\item We used 'awk' utility to know performance parameters in network by extracting data from trace file.
+\item For simulation of network .nam(network animator file)is used which gives proper visualization of transfer of packets and loss of packets in network topology. 
+\item Finally we use gnuplot to show the Graph of throughput and inter arrival time.
+\item  Plotted graphs show  differnt  behaviour of Network under differnt Protocol.
+
+
+\end{enumerate}
+\end{center}
+\begin{center}
+
+ \includegraphics[width=15 cm,height=13 cm]{./results.png}
+
+Simulation Result  Analysis in AODV and DSDV
+\end{center}
+\begin{center}
+
+ \includegraphics[width=15 cm,height=13 cm]{./hidden.png}
+
+Simulation Result  Analysis in Hidden Node Problem
+\end{center}
+\begin{center}
+
+ \includegraphics[width=15 cm,height=13 cm]{./exposed.png}
+
+Simulation Result  Analysis in Exposed Node Problem
+\end{center}
+\begin{center}
+
+ \includegraphics[width=15 cm,height=13 cm]{./csma.png}
+
+Simulation Result  Analysis in CSMA and CA Problem
+\end{center}
+\end{document}  

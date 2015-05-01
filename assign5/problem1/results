@@ -1,0 +1,12 @@
+Performance Analysis of M/M/1-K Queue
+Simulation Result at Bottleneck Server
+Throughput 288.208 Interarrival Time 0.0102315
+Simulation result of Queue1
+
+ Avg Queue Length in Packets 	: 75.1196
+Simulation result of Queue2
+
+ Avg Queue Length in Packets 	: 52.7243
+Simulation result of Queue3
+
+ Avg Queue Length in Packets 	: 43.1794

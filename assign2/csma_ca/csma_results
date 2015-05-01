@@ -1,0 +1,13 @@
+Performance Analysis of All Protocols
+Simulation result of  CSMA/CA protocol without RTS
+
+ Throughput 	: 1187.79  bps 
+ Interarrival Time	: 0.00666332  sec
+
+
+Simulation result of CSMA/CA protocol with RTS
+
+ Throughput 	: 1204.98  bps 
+ Interarrival Time	: 0.00499731  sec
+
+

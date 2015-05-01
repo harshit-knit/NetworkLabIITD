@@ -1,0 +1,25 @@
+Performance Analysis of All Protocols
+Simulation result of STATIC AODV
+
+ Throughput 	: 407.102  bps 
+ Interarrival Time	: 0.0133232  sec
+
+
+Simulation result of DYNAMIC AODV
+
+ Throughput 	: 322.707  bps 
+ Interarrival Time	: 0.0168049  sec
+
+
+Simulation result of STATIC DSDV
+
+ Throughput 	: 445.95  bps 
+ Interarrival Time	: 0.00664431  sec
+
+
+Simulation result of DYNAMIC DSDV
+
+ Throughput 	: 233.47  bps 
+ Interarrival Time	: 0.0231469  sec
+
+

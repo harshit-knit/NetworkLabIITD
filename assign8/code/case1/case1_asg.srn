@@ -1,0 +1,408 @@
+Type: SRN Model
+
+SubModel:
+Name: asg
+Number of places: 0
+Number of immediate trans: 0
+Number of timed trans: 0
+Number of arcs:23
+Token displayed:false
+
+Place:
+Name: waiterfree
+Token: 1
+X, Y: 284,84
+Number of connected objects: 0
+vInputArc: [arc18, arc19, arc22]
+vOutputArc: [arc1, arc2, arc4, arc6]
+Place label:
+X, Y: 280,67
+Width, Height: 62,19
+Textwidth: 0
+
+Place:
+Name: wait2
+Token: 0
+X, Y: 404,364
+Number of connected objects: 0
+vInputArc: [arc9]
+vOutputArc: [arc15]
+Place label:
+X, Y: 439,381
+Width, Height: 36,19
+Textwidth: 0
+
+Place:
+Name: wait1
+Token: 0
+X, Y: 4,324
+Number of connected objects: 0
+vInputArc: [arc11]
+vOutputArc: [arc13]
+Place label:
+X, Y: 32,323
+Width, Height: 36,19
+Textwidth: 0
+
+Place:
+Name: ordertaken
+Token: 0
+X, Y: 284,364
+Number of connected objects: 1
+Dest: tellkitchen
+Arc:arc21
+vInputArc: [arc8, arc10]
+vOutputArc: [arc21]
+Place label:
+X, Y: 230,390
+Width, Height: 65,19
+Textwidth: 0
+
+Place:
+Name: c1
+Token: 1
+X, Y: 44,124
+Number of connected objects: 0
+vInputArc: null
+vOutputArc: [arc0]
+Place label:
+X, Y: 54,156
+Width, Height: 19,19
+Textwidth: 0
+
+Place:
+Name: c2
+Token: 1
+X, Y: 524,124
+Number of connected objects: 0
+vInputArc: null
+vOutputArc: [arc7]
+Place label:
+X, Y: 534,156
+Width, Height: 19,19
+Textwidth: 0
+
+Place:
+Name: c1eating
+Token: 0
+X, Y: 44,524
+Number of connected objects: 0
+vInputArc: [arc17]
+vOutputArc: null
+Place label:
+X, Y: 37,556
+Width, Height: 52,19
+Textwidth: 0
+
+Place:
+Name: c2eating
+Token: 0
+X, Y: 604,564
+Number of connected objects: 0
+vInputArc: [arc16]
+vOutputArc: null
+Place label:
+X, Y: 597,596
+Width, Height: 52,19
+Textwidth: 0
+
+Timed:
+Name: servefood2
+Width: 14
+Height: 32
+X, Y: 453,484
+Number of connected objects: 0
+vInputArc: [arc6, arc15]
+vOutputArc: [arc16, arc19]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: 0.25
+Transition label:
+X, Y: 426,518
+Width, Height: 68,19
+Textwidth: 0
+Guard: null
+Priority: 10
+Choice Input: Constant
+
+Timed:
+Name: servefood1
+Width: 14
+Height: 32
+X, Y: 93,404
+Number of connected objects: 0
+vInputArc: [arc4, arc13]
+vOutputArc: [arc17, arc18]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: 0.25
+Transition label:
+X, Y: 79,436
+Width, Height: 68,19
+Textwidth: 0
+Guard: null
+Priority: 10
+Choice Input: Constant
+
+Timed:
+Name: tellkitchen
+Width: 14
+Height: 32
+X, Y: 293,444
+Number of connected objects: 0
+vInputArc: [arc21]
+vOutputArc: [arc22]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: 0.25
+Transition label:
+X, Y: 291,476
+Width, Height: 62,19
+Textwidth: 0
+Guard: tellkitchen
+Priority: 10
+Choice Input: Constant
+
+Timed:
+Name: takeorder1
+Width: 14
+Height: 32
+X, Y: 173,164
+Number of connected objects: 0
+vInputArc: [arc0, arc1]
+vOutputArc: [arc10, arc11]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: 0.25
+Transition label:
+X, Y: 106,178
+Width, Height: 65,19
+Textwidth: 0
+Guard: takeorder1
+Priority: 10
+Choice Input: Constant
+
+Timed:
+Name: takeorder2
+Width: 14
+Height: 32
+X, Y: 413,164
+Number of connected objects: 0
+vInputArc: [arc2, arc7]
+vOutputArc: [arc8, arc9]
+Type Transition: Timed
+Place Dependent: null
+Value Transition: 0.25
+Transition label:
+X, Y: 437,189
+Width, Height: 65,19
+Textwidth: 0
+Guard: takeorder2
+Priority: 10
+Choice Input: Constant
+
+Arc:
+Name: arc0
+X1, Y1, X2, Y2: 75,141,173,173
+Type: Regular
+Multiplicity: 1
+Src: c1
+Dest: takeorder1
+ArcPoints: [java.awt.Point[x=75,y=141], java.awt.Point[x=173,y=173]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc1
+X1, Y1, X2, Y2: 288,111,187,176
+Type: Regular
+Multiplicity: 1
+Src: waiterfree
+Dest: takeorder1
+ArcPoints: [java.awt.Point[x=288,y=111], java.awt.Point[x=187,y=176]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc2
+X1, Y1, X2, Y2: 314,106,413,171
+Type: Regular
+Multiplicity: 1
+Src: waiterfree
+Dest: takeorder2
+ArcPoints: [java.awt.Point[x=314,y=106], java.awt.Point[x=413,y=171]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc4
+X1, Y1, X2, Y2: 286,109,95,404
+Type: Regular
+Multiplicity: 1
+Src: waiterfree
+Dest: servefood1
+ArcPoints: [java.awt.Point[x=286,y=109], java.awt.Point[x=5,y=238], java.awt.Point[x=95,y=404]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc6
+X1, Y1, X2, Y2: 315,104,467,496
+Type: Regular
+Multiplicity: 1
+Src: waiterfree
+Dest: servefood2
+ArcPoints: [java.awt.Point[x=315,y=104], java.awt.Point[x=671,y=296], java.awt.Point[x=467,y=496]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc7
+X1, Y1, X2, Y2: 525,147,427,178
+Type: Regular
+Multiplicity: 1
+Src: c2
+Dest: takeorder2
+ArcPoints: [java.awt.Point[x=525,y=147], java.awt.Point[x=427,y=178]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc8
+X1, Y1, X2, Y2: 413,192,310,367
+Type: Regular
+Multiplicity: 1
+Src: takeorder2
+Dest: ordertaken
+ArcPoints: [java.awt.Point[x=413,y=192], java.awt.Point[x=310,y=367]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc9
+X1, Y1, X2, Y2: 420,196,422,364
+Type: Regular
+Multiplicity: 1
+Src: takeorder2
+Dest: wait2
+ArcPoints: [java.awt.Point[x=420,y=196], java.awt.Point[x=422,y=364]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc10
+X1, Y1, X2, Y2: 187,186,294,364
+Type: Regular
+Multiplicity: 1
+Src: takeorder1
+Dest: ordertaken
+ArcPoints: [java.awt.Point[x=187,y=186], java.awt.Point[x=294,y=364]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc11
+X1, Y1, X2, Y2: 173,188,33,330
+Type: Regular
+Multiplicity: 1
+Src: takeorder1
+Dest: wait1
+ArcPoints: [java.awt.Point[x=173,y=188], java.awt.Point[x=33,y=330]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc13
+X1, Y1, X2, Y2: 33,348,93,408
+Type: Regular
+Multiplicity: 1
+Src: wait1
+Dest: servefood1
+ArcPoints: [java.awt.Point[x=33,y=348], java.awt.Point[x=93,y=408]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc15
+X1, Y1, X2, Y2: 427,393,456,484
+Type: Regular
+Multiplicity: 1
+Src: wait2
+Dest: servefood2
+ArcPoints: [java.awt.Point[x=427,y=393], java.awt.Point[x=456,y=484]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc16
+X1, Y1, X2, Y2: 467,499,607,570
+Type: Regular
+Multiplicity: 1
+Src: servefood2
+Dest: c2eating
+ArcPoints: [java.awt.Point[x=467,y=499], java.awt.Point[x=607,y=570]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc17
+X1, Y1, X2, Y2: 93,436,67,525
+Type: Regular
+Multiplicity: 1
+Src: servefood1
+Dest: c1eating
+ArcPoints: [java.awt.Point[x=93,y=436], java.awt.Point[x=67,y=525]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc18
+X1, Y1, X2, Y2: 105,404,289,111
+Type: Regular
+Multiplicity: 1
+Src: servefood1
+Dest: waiterfree
+ArcPoints: [java.awt.Point[x=105,y=404], java.awt.Point[x=289,y=111]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc19
+X1, Y1, X2, Y2: 453,490,303,115
+Type: Regular
+Multiplicity: 1
+Src: servefood2
+Dest: waiterfree
+ArcPoints: [java.awt.Point[x=453,y=490], java.awt.Point[x=303,y=115]]
+Choice Input: Constant
+TypeIO: output
+
+Arc:
+Name: arc21
+X1, Y1, X2, Y2: 302,395,300,444
+Type: Regular
+Multiplicity: 1
+Src: ordertaken
+Dest: tellkitchen
+ArcPoints: [java.awt.Point[x=302,y=395], java.awt.Point[x=300,y=444]]
+Choice Input: Constant
+TypeIO: input
+
+Arc:
+Name: arc22
+X1, Y1, X2, Y2: 293,455,291,113
+Type: Regular
+Multiplicity: 1
+Src: tellkitchen
+Dest: waiterfree
+ArcPoints: [java.awt.Point[x=293,y=455], java.awt.Point[x=206,y=339], java.awt.Point[x=291,y=113]]
+Choice Input: Constant
+TypeIO: output
+
+
+Output:
+Outputs created: 1
+Output name: Steady-state throughput for a transition
+Time: null
+State: servefood2
+Grid values: 0

@@ -1,0 +1,294 @@
+
+ 
+
+\documentclass [12 pt ]{article}
+\usepackage{graphicx}%for including graphics file
+\usepackage{color}
+\usepackage[margin=1in]{geometry}
+%TITLE PAGE
+\title{\textbf{\huge{NETWORKS LAB\\[0.5 cm]EEP 703}\\[0.5]Assignment 9\\[1 cm]Packet sniffing using Wireshark \\[1.5 cm]}}%for title page
+\author{\LARGE { Maj Sachin Kaushik }\\[0.5 cm] Entry No: 2013EET8353 \\[0.5cm] Computer Technology\\ Department Of Electrical Engineering\\[1cm]
+\includegraphics[scale = 0.5]{./IITD.png}
+\\[0.5 cm] \textbf{Indian Institute of Technology Delhi}}
+\date{2nd April, 2014}
+
+%MAIN CONTENT
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+
+
+\newpage 
+%PROBLEM STATEMENT 
+\section{Problem Statement}
+List the different protocols you encounter when you visit a page (www.example.com) and explain their significance. Every URL you visit is hosted on a certain 
+server having an IP 
+address. Find out the IP addresses corresponding to URL you visited and your machine.
+Open the first packet which has the IP addresses of www.example.com in the 
+destination and has HTTP as the protocol.
+\begin{itemize}
+ \item Explain the five major headings: Frame, Ethernet Protocol, IPv4, TCP and HTTP. Why these different protocols are involved in the same message? 
+ How are these protocols related? 
+\item Does the information in this packet state about the browser and OS you are using?  Does it show that you are sending a cookie? Please send your .pcap 
+file containing information relevant to your answer, along 
+\end{itemize}
+Perform following and comUntitled Folderment on the response you get:
+\begin{itemize}
+\item Ping 255.255.255.255
+\item Ping 10.64.1.1
+\item Ping to a nearby system (State IP address of the System you are pinging to in your report)
+\end{itemize} 
+Capturing all link-layer frames thUntitled FolderUntitled Folderus gives you all
+messages sent/received from/by all proto 
+Trace the route to http://www.stanford.edu/ and comment on the route.
+As we can see that the explicit TCP packet is there as well as HTTP packet. we also have a tcp segment in each packet . The tcp packet is 
+for the syncronization of the whole connection  and the tcp segment is for the error checking and the end to end communication of the packet so basically 
+it is like there are 10 labour who are transffering the brick among them self each labour ensures the labour to labour delivery (data link layer) and as 
+well as the whole delivery of bricks is also ensured by the first and the last labour so the end to end delivery (transport layer) is done by the first 
+and the last labour and the node to node is done by each labour.  so that is how these layers are
+connected.and at the same time the route of each and every packet is selected by the network layer. application layer has a function to display th data 
+in user visible mannor .ethernet layer tells about the hardware of the systems so that we can have a unique entity of a system and also the analogy to be 
+used which finally describe the size of the frame as well as the transfer rate and many more things.
+
+\newpage
+\section {Abstract}\begin{document}
+Any time you browse the Web, send an email message, or run any application for that matter, we use a network application. Interestingly, all network 
+applications are based on the same basic programming model. Wireshark is a tool to analyse the frames that are being communicated between two different
+processes and find out the sequence of packets communicated on duplex link. 
+
+
+
+\newpage
+
+\section {Introduction}Untitled FolderUntitled Folder
+
+The basic tool for observiUntitled Folderng the messages exchanged between executing protocol entities
+is called a packet sniffer. As the Untitled FolderUntitled Foldernam96e suggests, a packet sniffer captures (“sniffs”)
+messages being sent/received from/by your computer; it will also typically store and/or
+display the contents of the various protocol fields in these captured messages. A packet
+sniffer itself is passive. It observes messages being sent and received by applications andAs we can see that the explicit TCP packet is there as well as 
+HTTP packet. we also have a tcp segment in each packet . The tcp packet is 
+for the syncronization of the whole connection  and the tcp segment is for the error checking and the end to end communication of the packet so basically
+it is like there are 10 labour who are transffering the brick among them self each labour ensures the labour to labour delivery (data link layer) and as
+well as the whole delivery of bricks is also ensured by the first and the last labour so the end to end delivery (transport layer) is done by the first 
+and the last labour and the node to node is done by each labour.  so that is how these layers are
+connected.and at the same time the route of each and every packet is selected by the network layer. application layer has a function to display th data 
+in user visible mannor .ethernet layer tells about the hardware of the systems so that we can have a unique entity of a system and also the analogy to be
+used which finally describe the size of the frame as well as the transfer rate and many more things.
+protocols running on your computer, but never sends packets itself. Similarly, received
+packets are never explicitly addressed to the packet sniffer. Instead, a packet sniffer
+receives a copy of packets that are sent / received from/by application and protocols
+executing on your machine.\\[1cm]
+
+The packet sniffer, shown within the dashed
+rectangle in Figure 1 is an addition to the usual software in your computer, and consists
+of two parts. The packet capture library receives a copy of every link-layer frame that
+is sent from or received by your computer. Messages exchanged by higher layer protocols
+such as HTTP, FTP, TCP, UDP, DNS, or IP all are eventually encapsulated in link-layer
+frames that are transmitted over physical media such as an Ethernet cable. Physical media
+is an Ethernet, and so all upper layer protocols are eventually
+encapsulated within an Ethernet frame.
+If there is a problem and the computer or rUntitled FolderUntitled Folderouter cannot functioning properly, it will send back a response giving it's current 
+state. 
+If the router/computer is not up or function properly the ICMP response would send back a "No Response" or "Request Timed Out" statement to the 
+users letting them know that the router/computer is not responding. The 255.255.255.255 address is called the all-subnet broadcast. It is also
+called the all-255 broadcast as well. This is used when you want "all machines on your network to hear a packet." The routing protocol does not
+relay 255.255.255.255 broadcasts outside of the network. So you can ping your complete LAN , but nobody outside of that network will hear you.
+This is basically a single ping command to check if all links in the roAs we can see that the explicit TCP packet is there as well as HTTP packet. we also
+have a tcp segment in each packet . The tcp packet is 
+for the syncronization of the whole connection  and the tcp segment is for the error checking and the end to end communication of the packet so basically 
+it is like there are 10 labour who are transffering the brick among them self each labour ensures the labour to labour delivery (data link layer) and as
+well as the whole delivery of bricks is also ensured by the first and the last labour so the end to end delivery (transport layer) is done by the first 
+and the last labour and the node to node is done by each labour.  so that is how these layers are
+connected.and at the same time the route of each and every packet is selected by the network layer. application layer has a function to display th data 
+in user visible mannor .ethernet layer tells about the hardware of the systems so that we can have a unique entity of a system and also the analogy to be 
+used which finally describe the size of the frame as well as the transfer rate and many more things.uters are up or not. This works on all kinds of WAN 
+interfaces connected
+to the router.cols and applications executing in your computer.\\[1cm]
+
+Problem leads to learn about the information that packets carry to either side of communication.
+This tool gives details of all data transfer between host and other processes running somewhere else
+on other servers. We can filter out packets required to be analyzed vis a vis a particular ip address.
+
+ \newpage                  
+\section{Methodology}
+\begin{enumerate}
+\item First we find the ip address of the website www.example.com and we start the the wireshark tool to start capturing the data.
+\item Now we open the web site www.example.com through our browser and terminate the data capturing after doing something on the webpage.
+\item Now save the captured data in a pcap file and close wireshark
+\item Open the Pcap file on wireshark and filter the data to be analysed by putting ip address of www.example.com as the filter.
+\item Analyse the data packets for information 
+
+\item Repeat above exerciseUntitled FolderUntitled Folders for ping and traceroute applications but keeping the process on wireshark the same.
+\end{enumerate}
+\end{itemize}
+\newpage
+\section{Execution Directive}  
+Type the following commands onUntitled Folder the terminal window in order to perform the given task.
+\begin{enumerate}As we can see that the explicit TCP packet is there as well as HTTP packet. we also have a tcp segment in each packet . The tcp packet is 
+for the syncronization of the whole connection  and the tcp segment is for the error checking and the end to end communication of the packet so basically 
+it is like there are 10 labour who are transffering the brick among them self each labour ensures the labour to labour delivery (data link layer) and as 
+well as the whole delivery of bricks is also ensured by the first and the last labour so the end to end delivery (transport layer) is done by the first 
+and the last labour and the node to node is done by each labour.  so that is how these layers are
+connected.and at the same time the route of each and every packet is selected by the network layer. application layer has a function to display th data 
+in user visible mannor .ethernet layer tells about the hardware of the systems so that we can have a unique entity of a system and also the analogy to 
+be used which finally describe the size of the frame as well as the transfer rate and many more things.
+ 
+\item sudo wireshark at terminal.
+\item after saving the file of data captured > cd location of file.
+\item sudo chmod 777 filename 
+\item ping 255.255.255.255 -b for problem 2.1Untitled FolderUntitled Folder
+\item ping 10.64.1.1 for problem 2.2
+\item ping 10.225.65.147 (local system)for problem 2.3
+\item ping www.stanford.edu to get ip a96ddress xxx.xxx.xxx.xxx
+\item traceroute xxx.xxx.xxx.xxx
+\end{enumerate}
+
+
+\newpage
+\section{Plots and figures}\end{itemize}
+The snapshot of the concerned data of the analysed packets is shown below. 
+\begin{center}\begin{document}
+
+\includegraphics[height=9cm, width=14cm]{./http.png}\\
+FIGURE 1: wireshark window for problem1
+\end{center}
+
+\begin{center}\begin{document}
+\includegraphics[height=9cm, width=14cm]{./http1.png}\\
+FIGURE 2: wireshark window for http://www.bharat-rakshak.com/ having IP addr 37.58.24.110
+\end{center}
+
+\begin{center}\begin{document}
+\includegraphics[height=9cm, width=14cm]{./ping1.png}\\
+FIGURE 3: cmd window for Ping to 255.255.255.255
+\end{center}
+
+\begin{center}\begin{document}
+\includegraphics[height=9cm, width=14cm]{./ping2.png}\\
+FIGURE 4: cmd window for Ping to 10.64.1.1
+\end{center}
+
+\begin{center}\begin{document}
+\includegraphics[height=9cm, width=14cm]{./ping3.png}\\
+FIGURE 5: cmd window for Ping to 10.225.66.96
+\end{center}
+
+\newpage
+\section{Result And Conclusion}
+
+\subsection{Problem1}
+\begin{itemize}
+ 
+
+
+\item Self IP:-
+using ifconfig we can get the ip of the present system or we can go to the network so that we know IP of the self system .
+\item Website ip:-
+we can get the ip of any site using the command ping <sitename> .it can be only known if you connected to the system.
+The protocalls which are used here :-
+\item TCP:-
+Tcp packet are used as initially when we want communication to happen we have to sync with the two system to do that and that can be done using Tcp 
+protocol in that the http is not used .
+\newline
+\subitem PHYSICAL:-
+As we can see the size of the packet is small with respect to the http packet because it does not consist of application data .
+\newline
+\subitem ETHERNET/DATALINK:-ethernet sho96ws the MAC address of both the source and the destination.
+\newline
+\subitem IP/NETWORK:-
+it represent the the ip frame oUntitled Folderf the whole packet and all the information linked with the routing with the corresponding ip address.
+\newline
+\subitem TCP/TRANSPORT:-
+it represents the PORT NUMBER and the checksum and the optional padding it is basically a medium by which we can communicate between two process
+\newline
+\item HTTP:-As we can see that the explicit TCP packet is there as well as HTTP packet. we also have a tcp segment in each packet . The tcp packet is 
+for the syncronization of the whole connection  and the tcp segment is for the error checking and the end to end communication of the packet so basically
+it is like there are 10 labour who are transffering the brick among them self each labour ensures the labour to labour delivery (data link layer) and as well 
+as the whole delivery of bricks is also ensured by the first and the last labour so the end to end delivery (transport layer) is done by the first and the 
+last labour and the node to node is done by each labour.  so that is how these layers are
+connected.and at the same time the route of each and every packet is selected by the network layer. application layer has a function to display th data in 
+user visible mannor .ethernet layer tells about the hardware of the systems so that we can have a unique entity of a system and also the analogy to be 
+used which finally describe the size of the frame as well as the transfer rate and many more things.
+the are the packet which after the syncronization are sent for the communication to happen and the are the actual packets because of which all kind of 
+tcp connection was made finally using these packet we can sent the information we want to send.it comprise of one more layer that is application layer 
+\newline
+\subitem PHYSICAL:-
+As we can see the size of the packet is small with respect to the http packet because it does not consist of application data .
+\newline
+\subitem ETHERNET/DATALINK:-
+ethernet shows the MAC address of both the source and the destination.
+
+\newline
+\subitem IP/NETWORK:-
+it represent the the ip frame of the whole packet and all the information linked with the routing with the corresponding ip address.
+\newline
+\subitem TCP/TRANSPORT:-
+it represents the PORT NUMBER and the checksum and the optional padding it is basically a medium by which we can communicate between two process
+\newline96Untitled Folder
+\subitem APPLICATION:-
+it has the actual information which it want to send from one node to other node.as in the data or any click to a perticular site which is hosted on a machine .
+\newline
+\subsubitem OS & BROWSER:- 	It contains information about the OS of the host and browser.
+\newline
+\subsubitem COOKIE:-A cookie, also known as an HTTP cookie, web cookie, or browser cookie, is a small piece of data sent from a website and stored in a 
+user's web browser 
+while the user is browsing that website. Every time the user loads the website, the browser sends the cookie back to the server to notify the website of 
+the user's previous activity.
+
+\item As we can see that the explicit TCP packet is there as well as HTTP packet. we also have a tcp segment in each packet . The tcp packet is 
+for the syncronization of the whole connection  and the tcp segment is for the error checking and the end to end communication of the packet so 
+basically it is like there are 10 labour who are transffering the brick among them self each labour ensures the labour to labour delivery 
+(datalink layer) and as well as the whole delivery of bricks is also ensured by the first and the last labour so the end to end delivery
+(transport layer) is done by the first and the last labour and the node to node is done by each labour.  so that is how these layers are
+connected and at the same time the route of each and every packet is selected by the network layer. application layer has a function to display 
+the data in user visible mannor .ethernet layer tells about the hardware of the systems so that we can have a unique entity of a system and also 
+the analogy to be used which finally describe the size of the frame as well as the transfer rate and many more things.
+\end{itemize}
+
+
+
+
+\subsection{Problem2}
+\begin{itemize}
+
+
+
+\item  Ping 255.255.255.255:-
+
+PING Means- PACKET INTERNET GOPHER(PING).
+
+PING is used to check the state of a remote machine via the TCP/IP protocol.
+ICMP (Internet Control Message Protocol) is used by PING statement.
+
+ICMP messages are only sent by a router or a destination node in response to a Packet Internet Gopher (PING) request.
+
+If there is a problem and the computer or router cannot functioning properly, it will send back a response giving it's current state. 
+If the router/computer is not up or function properly the ICMP response would send back a "No Response" or "Request Timed Out" statement to the
+users letting them know that the router/computer is not responding. The 255.255.255.255 address is called the all-subnet broadcast. It is also called 
+the all-255 broadcast as well. This is used when you want "all machines on your network to hear a packet." The routing protocol does not relay 
+255.255.255.255 broadcasts outside of the network. So you can ping your complete LAN , but nobody outside of that network will hear you.
+This is basically a single ping command to check if all links in the routers are up or not. This works on all kinds of WAN interfaces connected to the router.
+
+ \item ping 10.64.1.1:-
+
+
+Ping the IP address of the default gateway to verify that the default gateway is functioning and that you can communicate with a local host on the local network.
+ It is used to verify your computer's connectivity to the router.  Ping the IP address of your router.  
+	Reply from – When you see this response from the address that you pinged, it means that your connection is good.  The more replies you get,
+	the better your connection is with the router.  If it is showing 0 persent loss on the packets that were sent and received, 
+	it’s an indication that you are having a stable connection.
+\item Ping to a nearby system
+Ping 10.225.66.96
+
+Ping the IP address of the local computer to verify that it was added to the network correctly. Note that if the routing table is correct, this simply forwards the packet to the loopback address of 127.0.0.1.
+
+ 
+ \end{itemize}
+\subsection{Problem3}
+
+Traceroute must find the details or ip address of all the nodes or routers through which communication between host and the server for www.stanford.edu
+takes place, but because of the proxy servers in between the request is blocked.
+
+\end {document}

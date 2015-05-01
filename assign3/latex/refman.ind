@@ -1,0 +1,150 @@
+\begin{theindex}
+
+  \item {addRecord}
+    \subitem {service.c}, \hyperpage{8}
+    \subitem {service.h}, \hyperpage{11}
+
+  \indexspace
+
+  \item {bind\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port}
+    \subitem {service.c}, \hyperpage{8}
+    \subitem {service.h}, \hyperpage{11}
+  \item {BUF\_\discretionary {-}{}{}SIZE}
+    \subitem {server.c}, \hyperpage{6}
+    \subitem {service.c}, \hyperpage{7}
+
+  \indexspace
+
+  \item {catch\_\discretionary {-}{}{}signal}
+    \subitem {server.c}, \hyperpage{6}
+    \subitem {service.h}, \hyperpage{12}
+  \item {code/server.c}, \hyperpage{5}
+  \item {code/service.c}, \hyperpage{7}
+  \item {code/service.h}, \hyperpage{11}
+  \item {connect\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port}
+    \subitem {service.c}, \hyperpage{8}
+    \subitem {service.h}, \hyperpage{12}
+
+  \indexspace
+
+  \item {error}
+    \subitem {service.c}, \hyperpage{8}
+    \subitem {service.h}, \hyperpage{12}
+
+  \indexspace
+
+  \item {find\_\discretionary {-}{}{}command}
+    \subitem {service.c}, \hyperpage{8}
+    \subitem {service.h}, \hyperpage{12}
+
+  \indexspace
+
+  \item {handle\_\discretionary {-}{}{}shutdown}
+    \subitem {server.c}, \hyperpage{6}
+    \subitem {service.h}, \hyperpage{12}
+  \item {hear}
+    \subitem {service.c}, \hyperpage{9}
+    \subitem {service.h}, \hyperpage{12}
+
+  \indexspace
+
+  \item {listener\_\discretionary {-}{}{}id}
+    \subitem {server.c}, \hyperpage{6}
+
+  \indexspace
+
+  \item {main}
+    \subitem {server.c}, \hyperpage{6}
+
+  \indexspace
+
+  \item {open\_\discretionary {-}{}{}listener\_\discretionary {-}{}{}socket}
+    \subitem {service.c}, \hyperpage{9}
+    \subitem {service.h}, \hyperpage{13}
+
+  \indexspace
+
+  \item {PORT}
+    \subitem {server.c}, \hyperpage{6}
+  \item {print\_\discretionary {-}{}{}record}
+    \subitem {service.c}, \hyperpage{9}
+    \subitem {service.h}, \hyperpage{13}
+
+  \indexspace
+
+  \item {QUEUE}
+    \subitem {server.c}, \hyperpage{6}
+
+  \indexspace
+
+  \item {remove\_\discretionary {-}{}{}spaces}
+    \subitem {service.c}, \hyperpage{9}
+    \subitem {service.h}, \hyperpage{13}
+
+  \indexspace
+
+  \item {say}
+    \subitem {service.c}, \hyperpage{9}
+    \subitem {service.h}, \hyperpage{13}
+  \item {searchByEntry}
+    \subitem {service.c}, \hyperpage{10}
+    \subitem {service.h}, \hyperpage{13}
+  \item {searchByName}
+    \subitem {service.c}, \hyperpage{10}
+    \subitem {service.h}, \hyperpage{14}
+  \item {searchByYear}
+    \subitem {service.c}, \hyperpage{10}
+    \subitem {service.h}, \hyperpage{14}
+  \item {sem}
+    \subitem {server.c}, \hyperpage{6}
+  \item {server.c}
+    \subitem {BUF\_\discretionary {-}{}{}SIZE}, \hyperpage{6}
+    \subitem {catch\_\discretionary {-}{}{}signal}, \hyperpage{6}
+    \subitem {handle\_\discretionary {-}{}{}shutdown}, \hyperpage{6}
+    \subitem {listener\_\discretionary {-}{}{}id}, \hyperpage{6}
+    \subitem {main}, \hyperpage{6}
+    \subitem {PORT}, \hyperpage{6}
+    \subitem {QUEUE}, \hyperpage{6}
+    \subitem {sem}, \hyperpage{6}
+  \item {service.c}
+    \subitem {addRecord}, \hyperpage{8}
+    \subitem {bind\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port}, 
+		\hyperpage{8}
+    \subitem {BUF\_\discretionary {-}{}{}SIZE}, \hyperpage{7}
+    \subitem {connect\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port}, 
+		\hyperpage{8}
+    \subitem {error}, \hyperpage{8}
+    \subitem {find\_\discretionary {-}{}{}command}, \hyperpage{8}
+    \subitem {hear}, \hyperpage{9}
+    \subitem {open\_\discretionary {-}{}{}listener\_\discretionary {-}{}{}socket}, 
+		\hyperpage{9}
+    \subitem {print\_\discretionary {-}{}{}record}, \hyperpage{9}
+    \subitem {remove\_\discretionary {-}{}{}spaces}, \hyperpage{9}
+    \subitem {say}, \hyperpage{9}
+    \subitem {searchByEntry}, \hyperpage{10}
+    \subitem {searchByName}, \hyperpage{10}
+    \subitem {searchByYear}, \hyperpage{10}
+    \subitem {strnicmp}, \hyperpage{10}
+  \item {service.h}
+    \subitem {addRecord}, \hyperpage{11}
+    \subitem {bind\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port}, 
+		\hyperpage{11}
+    \subitem {catch\_\discretionary {-}{}{}signal}, \hyperpage{12}
+    \subitem {connect\_\discretionary {-}{}{}to\_\discretionary {-}{}{}port}, 
+		\hyperpage{12}
+    \subitem {error}, \hyperpage{12}
+    \subitem {find\_\discretionary {-}{}{}command}, \hyperpage{12}
+    \subitem {handle\_\discretionary {-}{}{}shutdown}, \hyperpage{12}
+    \subitem {hear}, \hyperpage{12}
+    \subitem {open\_\discretionary {-}{}{}listener\_\discretionary {-}{}{}socket}, 
+		\hyperpage{13}
+    \subitem {print\_\discretionary {-}{}{}record}, \hyperpage{13}
+    \subitem {remove\_\discretionary {-}{}{}spaces}, \hyperpage{13}
+    \subitem {say}, \hyperpage{13}
+    \subitem {searchByEntry}, \hyperpage{13}
+    \subitem {searchByName}, \hyperpage{14}
+    \subitem {searchByYear}, \hyperpage{14}
+  \item {strnicmp}
+    \subitem {service.c}, \hyperpage{10}
+
+\end{theindex}

@@ -1,0 +1,22 @@
+Model Name : assig7a
+Owner : SHARPE Project Group
+Date Created : Thu Mar 07 10:35:30 IST 2013
+Comment : 
+
+CommentEnd
+
+SubModel : assig7a
+Type : SRN Model
+
+
+Function:
+Name:funct3
+Number Parameter:0
+Body number of lines:5
+if(#(Poth_data) < 10)
+#(Poth_data)*(1/362)
+else
+9/362
+end
+
+
